@@ -6,7 +6,7 @@ class Game:
     """Game class for Learn2Slither"""
 
     def initmap(self, mapsize=1):
-        """Initialize a square map of size n x n"""
+        """Initialize a square map of size n x n (only walls and empty spaces)"""
         self.map = [
             ["W" if (i == 0 or i == mapsize + 1 or
                      j == 0 or j == mapsize + 1) else "0"
@@ -36,48 +36,124 @@ class Game:
     
     def generate_snake_position(self):
         """
-        Generate a random position for the snake (at least 3 cells from walls)
+        Generate initial snake body with 3 contiguous segments
+        Places randomly and places segments on the map
         
         Returns:
-            Tuple (x, y) of the placed snake
+            List of 3 (x, y) tuples: [head, segment2, segment3]
         """
         while True:
-            x = random.randint(3, len(self.map) - 4)
-            y = random.randint(3, len(self.map) - 4)
-            if self.map[y][x] == "0":
-                self.map[y][x] = "H"
-                return (x, y)
+            # Random starting position anywhere on the map
+            x = random.randint(1, len(self.map) - 2)
+            y = random.randint(1, len(self.map) - 2)
+            
+            # Random direction: 0=RIGHT, 1=LEFT, 2=DOWN, 3=UP
+            direction = random.randint(0, 3)
+            
+            if direction == 0:  # Horizontal RIGHT
+                body = [(x, y), (x - 1, y), (x - 2, y)]
+            elif direction == 1:  # Horizontal LEFT
+                body = [(x, y), (x + 1, y), (x + 2, y)]
+            elif direction == 2:  # Vertical DOWN
+                body = [(x, y), (x, y - 1), (x, y - 2)]
+            else:  # Vertical UP
+                body = [(x, y), (x, y + 1), (x, y + 2)]
+            
+            # Check if all positions are valid (empty and within bounds)
+            if all(1 <= seg_x < len(self.map) - 1 and 
+                   1 <= seg_y < len(self.map) - 1 and 
+                   self.map[seg_y][seg_x] == "0" 
+                   for seg_x, seg_y in body):
+                # Place snake on map
+                for i, (seg_x, seg_y) in enumerate(body):
+                    self.map[seg_y][seg_x] = "H" if i == 0 else "s"
+                return body
 
-    def _min_distance_to_green_apple(self):
-        """Calculate Manhattan distance to closest green apple"""
-        head_x, head_y = self.snake.head
-        min_dist = float('inf')
+    def compute_vision(self):
+        """
+        Compute snake's vision - ONLY what the snake can see
+        Returns only visible apples and obstacles in each direction
         
-        for apple_type, (apple_x, apple_y) in self.apples:
-            if apple_type == "G":
-                dist = abs(head_x - apple_x) + abs(head_y - apple_y)
-                min_dist = min(min_dist, dist)
+        Returns:
+            dict with keys 'UP', 'DOWN', 'LEFT', 'RIGHT'
+            Each value is a tuple: (obstacle_dist, has_green, has_red)
+        """
+        x, y = self.snake.head
+        directions = {"UP": (0, -1), "DOWN": (0, 1), "LEFT": (-1, 0), "RIGHT": (1, 0)}
         
-        return min_dist if min_dist != float('inf') else 20  # Max distance
+        # Extract apple positions by type
+        green_positions = set(pos for atype, pos in self.apples if atype == "G")
+        red_positions = set(pos for atype, pos in self.apples if atype == "R")
+        
+        vision = {}
+        
+        for direction_name, (dx, dy) in directions.items():
+            obstacle_dist = 10
+            has_green = False
+            has_red = False
+            
+            # Look ahead in this direction
+            for distance in range(1, 11):
+                look_x = x + dx * distance
+                look_y = y + dy * distance
+                
+                # Check for wall (boundary)
+                if look_x < 1 or look_x > self.mapsize or look_y < 1 or look_y > self.mapsize:
+                    if obstacle_dist == 10:
+                        obstacle_dist = distance
+                    break
+                
+                # Check for snake body collision
+                pos = (look_x, look_y)
+                if pos in self.snake.body[1:]:
+                    if obstacle_dist == 10:
+                        obstacle_dist = distance
+                    continue
+                
+                # Check for apples ONLY in vision
+                if pos in green_positions:
+                    has_green = True
+                elif pos in red_positions:
+                    has_red = True
+            
+            # Cap at 9
+            obstacle_dist = min(obstacle_dist, 9)
+            vision[direction_name] = (obstacle_dist, has_green, has_red)
+        
+        return vision
+
+    def _has_visible_green_apple(self, vision):
+        """
+        Check if any green apple is visible in the snake's vision
+        
+        Args:
+            vision: Dict from compute_vision()
+            
+        Returns:
+            True if at least one green apple is visible
+        """
+        return any(has_green for _, has_green, _ in vision.values())
 
     def __init__(self, mapsize=10):
         """Initialize the game"""
         self.mapsize = mapsize
         self.running = False
         self.apples = []
-        self.steps_since_eaten = 0  # Track inactivity
-        self.last_apple_distance = 20  # Track distance to apple
+        self.steps_since_eaten = 0
+        self.last_direction = "RIGHT"  # Default starting direction
+        
+        # Opposite directions mapping
+        self.opposite_directions = {
+            "UP": "DOWN",
+            "DOWN": "UP",
+            "LEFT": "RIGHT",
+            "RIGHT": "LEFT"
+        }
 
-        # Create the map (also places all entities and populates apple list)
-        snake_pos = self.initmap(mapsize)
-        # Create Snake object
-        self.snake = Snake(snake_pos[0], snake_pos[1])
-        # Initialize apple distance after snake is created
-        self.last_apple_distance = self._min_distance_to_green_apple()
+        # Initialize map (creates map, places snake, creates apples)
+        snake_body = self.initmap(mapsize)
+        self.snake = Snake(snake_body)
 
-    def update(self):
-        """Update game state"""
-        pass
 
     def step(self, action):
         """
@@ -89,22 +165,27 @@ class Game:
             reward: float - Reward based on snake length change
             status: str - "OK", "WALL", "SELF", "ZERO_LENGTH"
         """
-        # Track snake length and apple distance before action
-        length_before = len(self.snake.body)
-        apple_distance_before = self.last_apple_distance
+        # Prevent opposite direction (demi-tour) - ignore the action
+        if action == self.opposite_directions[self.last_direction]:
+            # Keep moving in last direction instead
+            action = self.last_direction
         
-        # 1. Move snake
+        self.last_direction = action
+        
+        # Get vision BEFORE moving (compute in game, not expose full map to snake)
+        vision_before = self.compute_vision()
+        
+        # Track snake length before action
+        length_before = len(self.snake.body)
+        
         self.snake.move(action)
         
-        # 2. Check wall collision
         if self.snake.check_collision_wall(self.mapsize):
             return None, -10000, "WALL"
 
-        # 3. Check self collision
         if self.snake.check_collision_self():
             return None, -10000, "SELF"
 
-        # 4. Check apple collision and grow/shrink
         head = self.snake.body[0]
         eaten_apple = None
 
@@ -121,33 +202,24 @@ class Game:
                 self.snake.grow()
             elif apple_type == "R":
                 self.snake.shrink()
-
             # Respawn new apple of same type
             new_pos = self.generate_apples(apple_type)
             self.apples.append((apple_type, new_pos))
-            
             # Reset inactivity counter
             self.steps_since_eaten = 0
         else:
             # Increment inactivity counter
             self.steps_since_eaten += 1
 
-        # 5. Check if snake died (length 0)
         if len(self.snake.body) == 0:
             return None, -10000, "ZERO_LENGTH"
-        
-        # 5b. Check starvation (too much inactivity = infinite loop behavior)
         # If snake hasn't eaten for 200 steps, it's likely stuck in a loop
         if self.steps_since_eaten > 200:
             return None, -10000, "STARVED"
 
-        # 6. Update apple distance for next calculation
-        self.last_apple_distance = self._min_distance_to_green_apple()
-        
-        # 7. Get vision FIRST (needed for reward calculation)
-        vision = self.snake.get_vision(self.map, self.apples, self.mapsize)
-        
-        # 8. Calculate reward based on snake length change
+        # Get vision AFTER moving
+        vision_after = self.compute_vision()
+
         length_after = len(self.snake.body)
         length_change = length_after - length_before
         
@@ -155,27 +227,18 @@ class Game:
             # Snake grew: +100 per segment gained
             reward = length_change * 100
         else:
-            # No growth: movement cost + inactivity penalty
             inactivity_penalty = max(0, (self.steps_since_eaten - 20) * 0.5)
             reward = -1 - inactivity_penalty
+        
+            apple_was_visible = self._has_visible_green_apple(vision_before)
+            apple_is_visible = self._has_visible_green_apple(vision_after)
             
-            # Proximity bonus: reward for getting closer to green apple
-            # BUT ONLY IF APPLE IS VISIBLE (in vision range 1-9)
-            apple_visible = any(has_green for _, has_green, _ in vision.values())
-            
-            if apple_visible:
-                apple_distance = self._min_distance_to_green_apple()
-                if apple_distance < self.last_apple_distance:
-                    # Got closer! Reward inversely proportional to distance
-                    # Distance 1: +3.0, Distance 2: +2.0, Distance 3: +1.5
-                    proximity_bonus = max(0.5, 3.5 - (apple_distance * 0.5))
-                    reward += proximity_bonus
-                elif apple_distance > self.last_apple_distance:
-                    # Got further: small penalty
-                    reward -= 0.3
-
-        # 9. Return
-        return vision, reward, "OK"
+            if apple_was_visible and not apple_is_visible:
+                reward -= 10.0
+            elif apple_was_visible and apple_is_visible:
+                reward += 5
+        
+        return vision_after, reward, "OK"
 
     def render(self):
         """
@@ -191,7 +254,7 @@ class Game:
         # Place snake on map
         for i, (x, y) in enumerate(self.snake.body):
             if i == 0:
-                display_map[y][x] = "S"  # Snake head
+                display_map[y][x] = "H"  # Snake head
             else:
                 display_map[y][x] = "s"  # Snake body
         
@@ -205,55 +268,51 @@ class Game:
         
         print("=" * 30)
 
-    def handle_input(self):
-        """Handle user input"""
-        pass
-
-    def run(self):
-        """Main game loop"""
-        self.running = True
-        while self.running:
-            self.handle_input()
-            self.update()
-            self.render()
-
 
 def display_vision_2d(vision):
     """
     Display snake vision in 2D crosshair format
     Args:
-        vision: Dict from snake.get_vision() with keys
-            'up', 'down', 'left', 'right'
+        vision: Dict from compute_vision() with keys 'UP', 'DOWN', 'LEFT', 'RIGHT'
+                Each value is a tuple: (obstacle_dist, has_green, has_red)
     Returns:
         String with 2D visualization
     Example:
            W
            0
-           0
+           G
     W000000H0W
-           S
            0
            0
     """
-    up_line = vision['up']
-    down_line = vision['down']
-    left_line = vision['left']
-    right_line = vision['right']
-    
     lines = []
     
     # UP direction (vertical)
-    for char in up_line[1:]:
+    up_dist, up_green, up_red = vision['UP']
+    for i in range(1, up_dist):
+        char = "G" if up_green else "0"
         lines.append(f"       {char}")
+    lines.append(f"       W" if up_dist <= 9 else "       0")
     
     # MIDDLE line: LEFT + HEAD + RIGHT
-    left_part = left_line[1:][::-1]  # Reverse to show left-to-right
-    right_part = right_line[1:]
-    middle = f"{left_part}H{right_part}"
+    left_dist, left_green, left_red = vision['LEFT']
+    right_dist, right_green, right_red = vision['RIGHT']
+    
+    left_str = "".join(["G" if left_green else "0" for _ in range(1, left_dist)])
+    left_str = left_str[::-1]  # Reverse to show left-to-right
+    left_str += "W" if left_dist <= 9 else "0"
+    
+    right_str = "W" if right_dist <= 9 else "0"
+    right_str += "".join(["G" if right_green else "0" for _ in range(1, right_dist)])
+    
+    middle = f"{left_str}H{right_str}"
     lines.append(middle)
     
     # DOWN direction (vertical)
-    for char in down_line[1:]:
+    down_dist, down_green, down_red = vision['DOWN']
+    lines.append(f"       W" if down_dist <= 9 else "       0")
+    for i in range(1, down_dist):
+        char = "G" if down_green else "0"
         lines.append(f"       {char}")
     
     return "\n".join(lines)

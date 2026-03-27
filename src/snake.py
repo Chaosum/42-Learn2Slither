@@ -6,15 +6,18 @@ class Snake:
 
     directions = { "LEFT": (-1, 0), "RIGHT": (1, 0), "UP": (0, -1), "DOWN": (0, 1) }
 
-    def __init__(self, x, y):
+    def __init__(self, body=None):
         """
-        Initialize snake at position (x, y)
+        Initialize snake with body segments
         
-        body: list of (x, y) tuples
+        Args:
+            body: list of (x, y) tuples starting with head
+                  If None, starts with single head at (0, 0)
+        
         body[0] = head
         body[1:] = other segments
         """
-        self.body = [(x, y)]  # Start with just the head
+        self.body = body if body is not None else [(0, 0)]
         self._last_tail = None  # Used for grow()
 
     @property

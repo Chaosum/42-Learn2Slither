@@ -24,7 +24,7 @@ class Interpreter:
         game_status = None
         
         # Get initial vision
-        vision = self.game.snake.get_vision(self.game.map, self.game.apples, self.game.mapsize)
+        vision = self.game.compute_vision()
         
         while True:
             # Agent chooses action based on vision
@@ -103,7 +103,7 @@ class Interpreter:
             game_status = None
             
             # Get initial vision
-            vision = self.game.snake.get_vision(self.game.map, self.game.apples, self.game.mapsize)
+            vision = self.game.compute_vision()
             
             if gui:
                 gui_instance.render(step=0, reward=0, status="START")
@@ -114,8 +114,9 @@ class Interpreter:
                     gui_instance.close()
                     return {
                         'episode_lengths': episode_lengths,
-                        'best_avg': best_avg,
-                        'best_episode': best_episode,
+                        'best_window_avg': best_window_avg,
+                        'best_window_start': best_window_start,
+                        'best_window_end': best_window_end,
                         'best_q_table': best_q_table
                     }
                 
@@ -197,65 +198,7 @@ class Interpreter:
             print(f"Steps: {stats['steps']}, Reward: {stats['total_reward']}")
         
         return stats
-    
-    def step_by_step_episode(self, auto=False):
-        """
-        Play one episode with step-by-step visualization
-        Press Enter after each action to continue
-        
-        Args:
-            auto: bool - Auto-play without waiting for input (for demo)
-        """
-        original_epsilon = self.agent.epsilon
-        self.agent.epsilon = 0  # No exploration, just exploit
-        
-        total_reward = 0
-        steps = 0
-        
-        print("\n" + "=" * 50)
-        print("STEP-BY-STEP EPISODE")
-        print("=" * 50)
-        
-        # Get initial vision and render
-        vision = self.game.snake.get_vision(self.game.map, self.game.apples, self.game.mapsize)
-        self.game.render()
-        
-        while True:
-            # Get action from agent
-            action = self.agent.choose_action(vision)
-            print(f"\n➡️  ACTION: {action}")
-            
-            if not auto:
-                input("Press Enter to execute action...")
-            else:
-                import time
-                time.sleep(1)  # Auto delay for demo
-            
-            # Execute action
-            new_vision, reward, status = self.game.step(action)
-            total_reward += reward
-            steps += 1
-            
-            print(f"✨ Reward: {reward:+.1f} | Status: {status}")
-            
-            # Render new state
-            self.game.render()
-            
-            if status != "OK":
-                print(f"\n❌ GAME OVER: {status}")
-                print(f"Total Reward: {total_reward:.2f}")
-                print(f"Total Steps: {steps}")
-                break
-            
-            vision = new_vision
-        
-        self.agent.epsilon = original_epsilon
-        
-        return {
-            "total_reward": total_reward,
-            "steps": steps,
-            "status": status
-        }
+
     
     def play_episode_gui(self):
         """
@@ -276,7 +219,7 @@ class Interpreter:
         max_steps = 500  # Prevent infinite loops from circular behavior
         
         # Get initial vision
-        vision = self.game.snake.get_vision(self.game.map, self.game.apples, self.game.mapsize)
+        vision = self.game.compute_vision()
         gui.render(step=steps, reward=0, status="INIT")
         
         game_status = "OK"
