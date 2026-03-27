@@ -13,26 +13,45 @@ class Game:
              for j in range(mapsize + 2)]
             for i in range(mapsize + 2)
         ]
-        snake_pos = self.generate_snake_position()
+        snake_pos, initial_direction = self.generate_snake_position()
         # Original config: 2 green + 1 red
         self.apples.append(("G", self.generate_apples("G")))
         self.apples.append(("G", self.generate_apples("G")))
         self.apples.append(("R", self.generate_apples("R")))
-        return snake_pos
+        return snake_pos, initial_direction
 
     def generate_apples(self, entity="G"):
         """
         Generate a random position for an entity on the map
+        Does NOT modify the map - self.apples is the source of truth
         
         Returns:
-            Tuple (x, y) of the placed entity
+            Tuple (x, y) of the generated position
         """
-        while True:
-            x = random.randint(1, len(self.map) - 2)
-            y = random.randint(1, len(self.map) - 2)
-            if self.map[y][x] == "0":
-                self.map[y][x] = entity
-                return (x, y)
+        # Occupied positions: snake body + existing apples
+        occupied = set(self.snake.body if hasattr(self, 'snake') else [])
+        occupied.update(pos for _, pos in self.apples)
+        
+        max_attempts = 100
+        attempts = 0
+        
+        while attempts < max_attempts:
+            x = random.randint(1, self.mapsize)
+            y = random.randint(1, self.mapsize)
+            pos = (x, y)
+            
+            if pos not in occupied:
+                return pos
+            attempts += 1
+        
+        # Fallback: find first available position (shouldn't happen)
+        for y in range(1, self.mapsize + 1):
+            for x in range(1, self.mapsize + 1):
+                if (x, y) not in occupied:
+                    return (x, y)
+        
+        # Emergency fallback
+        return (1, 1)
     
     def generate_snake_position(self):
         """
@@ -40,7 +59,9 @@ class Game:
         Places randomly and places segments on the map
         
         Returns:
-            List of 3 (x, y) tuples: [head, segment2, segment3]
+            Tuple (body, direction) where:
+            - body: List of 3 (x, y) tuples: [head, segment2, segment3]
+            - direction: str - "UP", "DOWN", "LEFT", or "RIGHT"
         """
         while True:
             # Random starting position anywhere on the map
@@ -48,16 +69,20 @@ class Game:
             y = random.randint(1, len(self.map) - 2)
             
             # Random direction: 0=RIGHT, 1=LEFT, 2=DOWN, 3=UP
-            direction = random.randint(0, 3)
+            direction_idx = random.randint(0, 3)
             
-            if direction == 0:  # Horizontal RIGHT
+            if direction_idx == 0:  # Horizontal RIGHT
                 body = [(x, y), (x - 1, y), (x - 2, y)]
-            elif direction == 1:  # Horizontal LEFT
+                direction = "RIGHT"
+            elif direction_idx == 1:  # Horizontal LEFT
                 body = [(x, y), (x + 1, y), (x + 2, y)]
-            elif direction == 2:  # Vertical DOWN
+                direction = "LEFT"
+            elif direction_idx == 2:  # Vertical DOWN
                 body = [(x, y), (x, y - 1), (x, y - 2)]
+                direction = "DOWN"
             else:  # Vertical UP
                 body = [(x, y), (x, y + 1), (x, y + 2)]
+                direction = "UP"
             
             # Check if all positions are valid (empty and within bounds)
             if all(1 <= seg_x < len(self.map) - 1 and 
@@ -67,7 +92,7 @@ class Game:
                 # Place snake on map
                 for i, (seg_x, seg_y) in enumerate(body):
                     self.map[seg_y][seg_x] = "H" if i == 0 else "s"
-                return body
+                return body, direction
 
     def compute_vision(self):
         """
@@ -140,7 +165,6 @@ class Game:
         self.running = False
         self.apples = []
         self.steps_since_eaten = 0
-        self.last_direction = "RIGHT"  # Default starting direction
         
         # Opposite directions mapping
         self.opposite_directions = {
@@ -151,8 +175,9 @@ class Game:
         }
 
         # Initialize map (creates map, places snake, creates apples)
-        snake_body = self.initmap(mapsize)
+        snake_body, initial_direction = self.initmap(mapsize)
         self.snake = Snake(snake_body)
+        self.last_direction = initial_direction  # Track the initial direction
 
 
     def step(self, action):

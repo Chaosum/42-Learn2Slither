@@ -144,12 +144,12 @@ def test_saved_model(model_manager):
 
 
 def play_with_model(agent, interpreter):
-	"""Play 10 episodes and show statistics"""
+	"""Play 10 episodes with GUI and show statistics"""
 	# Set epsilon to 0 (exploit only, no exploration)
 	original_epsilon = agent.epsilon
 	agent.epsilon = 0
 
-	print("\n🐍 Running 10 test episodes...")
+	print("\n🐍 Running 10 test episodes (GUI)...")
 	
 	episode_lengths = []
 	episode_rewards = []
@@ -158,7 +158,7 @@ def play_with_model(agent, interpreter):
 		# Fresh game for each test episode
 		interpreter.game = Game(mapsize=10)
 		
-		stats = interpreter.run_episode()
+		stats = interpreter.play_episode_gui()
 		max_length = len(interpreter.game.snake.body)
 		
 		episode_lengths.append(max_length)
@@ -168,14 +168,14 @@ def play_with_model(agent, interpreter):
 	
 	# Show summary
 	avg_length = sum(episode_lengths) / len(episode_lengths)
-	max_length = max(episode_lengths)
+	max_length_overall = max(episode_lengths)
 	avg_reward = sum(episode_rewards) / len(episode_rewards)
 	
 	print("\n" + "=" * 60)
 	print("TEST SUMMARY (10 episodes)")
 	print("=" * 60)
 	print(f"Average size: {avg_length:.1f}")
-	print(f"Max size: {max_length}")
+	print(f"Max size: {max_length_overall}")
 	print(f"Average reward: {avg_reward:.1f}")
 	print("=" * 60)
 
