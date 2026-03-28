@@ -5,32 +5,16 @@ class Agent:
     """Q-learning agent for Learn2Slither"""
 
     def __init__(self, epsilon=0.1, learning_rate=0.1, discount_factor=0.95):
-        """
-        Initialize the Q-learning agent
-        
-        Args:
-            epsilon: Exploration rate (probability of random action)
-            learning_rate: How much to update Q-values (alpha)
-            discount_factor: How much to value future rewards (gamma)
-        """
         self.q_table = {}
         self.actions = ["UP", "DOWN", "LEFT", "RIGHT"]
         self.epsilon = epsilon
         self.learning_rate = learning_rate
         self.discount_factor = discount_factor
-        
-        # Track current state and action for learning
         self.last_state = None
         self.last_action = None
-        self.last_direction = None  # Track direction to prevent 180° turns
+        self.last_direction = None
     
     def _vision_to_key(self, vision):
-        """
-        Convert vision dict to hashable tuple for Q-table key
-        
-        Vision format: {direction: (obstacle_dist, has_green, has_red), ...}
-        Returns tuple of 12 values (3 per direction × 4 directions)
-        """
         return (
             vision['UP'][0], vision['UP'][1], vision['UP'][2],
             vision['DOWN'][0], vision['DOWN'][1], vision['DOWN'][2],
@@ -39,22 +23,12 @@ class Agent:
         )
     
     def _init_state(self, state_key):
-        """Initialize Q-values for a new state"""
         if state_key not in self.q_table:
             self.q_table[state_key] = {action: 0.0 for action in self.actions}
     
     def _get_valid_actions(self):
-        """
-        Get valid actions based on current direction
-        Prevents 180-degree turns
-        
-        Returns:
-            list: Valid action strings, or all 4 if no direction yet
-        """
         if self.last_direction is None:
             return self.actions
-        
-        # Map directions to their opposites
         opposites = {
             "UP": "DOWN",
             "DOWN": "UP",
@@ -66,34 +40,16 @@ class Agent:
         return [a for a in self.actions if a != opposite]
     
     def choose_action(self, vision):
-        """
-        Choose an action using epsilon-greedy strategy
-        Only chooses from valid actions (no 180° turns)
-        
-        Args:
-            vision: Dict with keys 'UP', 'DOWN', 'LEFT', 'RIGHT'
-        
-        Returns:
-            str: "UP", "DOWN", "LEFT", or "RIGHT"
-        """
         state_key = self._vision_to_key(vision)
         self._init_state(state_key)
-        
-        # Store state for later learning
         self.last_state = state_key
-        
-        # Get valid actions (respecting last direction)
         valid_actions = self._get_valid_actions()
         
-        # Epsilon-greedy: explore randomly or exploit best action
         if random.random() < self.epsilon:
             action = random.choice(valid_actions)
         else:
-            # Choose action with highest Q-value from valid actions
-            action = max(valid_actions, 
-                        key=lambda a: self.q_table[state_key][a])
+            action = max(valid_actions, key=lambda a: self.q_table[state_key][a])
         
-        # Track this direction for next time
         self.last_direction = action
         self.last_action = action
         return action

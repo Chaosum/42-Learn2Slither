@@ -2,45 +2,27 @@ class Interpreter:
     """Interpreter orchestrates the agent, game, and learning loop"""
 
     def __init__(self, agent, game):
-        """
-        Initialize the interpreter
-        
-        Args:
-            agent: Agent instance
-            game: Game instance
-        """
         self.agent = agent
         self.game = game
     
-    def run_episode(self):
-        """
-        Run one complete episode
-        
-        Returns:
-            dict: Episode statistics (total_reward, steps, status)
-        """
+    def run_episode(self, learning=True):
         total_reward = 0
         steps = 0
         game_status = None
         
-        # Get initial vision
         vision = self.game.compute_vision()
         
         while True:
-            # Agent chooses action based on vision
             action = self.agent.choose_action(vision)
-            
-            # Execute action in game
             new_vision, reward, status = self.game.step(action)
             
-            # Agent learns from reward and new state
-            self.agent.learn(new_vision, reward)
+            if learning:
+                self.agent.learn(new_vision, reward)
             
             total_reward += reward
             steps += 1
             game_status = status
             
-            # Episode ends if not OK
             if status != "OK":
                 break
             
@@ -53,38 +35,20 @@ class Interpreter:
         }
     
     def train(self, episodes=1000, verbose=True, gui=False):
-        """
-        Train the agent for multiple episodes
-        
-        Args:
-            episodes: int - Number of episodes to train
-            verbose: bool - Print progress every 100 episodes
-            gui: bool - Show GUI visualization during training
-        
-        Returns:
-            dict: {
-                'episode_lengths': list of max lengths per episode,
-                'best_avg': best average score found,
-                'best_episode': episode where best avg was found,
-                'best_q_table': Q-table snapshot at best performance
-            }
-        """
-        self.episodes_total = episodes  # Store total episodes for epsilon decay calculation
+        self.episodes_total = episodes
         episode_lengths = []
+        episode_rewards = []
         gui_instance = None
-        best_window_avg = 0
-        best_window_start = 0
-        best_window_end = 0
+        best_episode_length = 0
+        best_episode_num = 0
         best_q_table = None
         
         if gui:
             from src.gui import GUI
         
         for episode in range(episodes):
-            # EPSILON = 0 (Pure Exploitation)
-            # Explored vs tried epsilon decay 0.6->0, but it doesn't transfer well to testing
-            # epsilon=0 is faster to good performance and more stable at test time
-            self.agent.epsilon = 0
+            # Epsilon decay: 1.0 → 0.05 gradually over all episodes (maintain exploration)
+            self.agent.epsilon = max(0.05, 1.0 - (episode / episodes) * 0.95)
             
             # Reset game for new episode
             self.game = type(self.game)(self.game.mapsize)
@@ -109,33 +73,20 @@ class Interpreter:
                 gui_instance.render(step=0, reward=0, status="START")
             
             while True:
-                # Check for quit in GUI
                 if gui and not gui_instance.handle_events():
                     gui_instance.close()
-                    return {
-                        'episode_lengths': episode_lengths,
-                        'best_window_avg': best_window_avg,
-                        'best_window_start': best_window_start,
-                        'best_window_end': best_window_end,
-                        'best_q_table': best_q_table
-                    }
+                    break
                 
-                # Agent chooses action
                 action = self.agent.choose_action(vision)
-                
-                # Execute action
                 new_vision, reward, status = self.game.step(action)
                 self.agent.learn(new_vision, reward)
                 
                 total_reward += reward
                 steps += 1
                 game_status = status
-                
-                # Track max length
                 current_length = len(self.game.snake.body)
                 max_length = max(max_length, current_length)
                 
-                # Render GUI
                 if gui:
                     gui_instance.render(step=steps, reward=reward, status=status)
                 
@@ -145,53 +96,37 @@ class Interpreter:
                 vision = new_vision
             
             episode_lengths.append(max_length)
+            episode_rewards.append(total_reward)
             
-            # Track best 100-episode window average
+            if max_length > best_episode_length:
+                best_episode_length = max_length
+                best_episode_num = episode + 1
+                best_q_table = {k: v.copy() for k, v in self.agent.q_table.items()}
+            
             if verbose and (episode + 1) % 100 == 0:
                 window_avg = sum(episode_lengths[-100:]) / 100
-                max_observed = max(episode_lengths[-100:])
-                
-                # If this window is better than previous best, save it
-                if window_avg > best_window_avg:
-                    best_window_avg = window_avg
-                    best_window_start = episode + 1 - 100
-                    best_window_end = episode + 1
-                    best_q_table = {k: v.copy() for k, v in self.agent.q_table.items()}
-                
+                window_reward = sum(episode_rewards[-100:]) / 100
+                max_obs = max(episode_lengths[-100:])
                 print(f"Episode {episode + 1}/{episodes} - "
                       f"Avg Size: {window_avg:.1f} | "
-                      f"Max Size: {max_observed} | "
-                      f"Best Window Avg: {best_window_avg:.1f} (ep {best_window_start}-{best_window_end})")
+                      f"Avg Reward: {window_reward:.1f} | "
+                      f"Max Size: {max_obs} | "
+                      f"Best: #{best_episode_num} (Size: {best_episode_length})")
         
         if gui and gui_instance:
             gui_instance.close()
         
         return {
             'episode_lengths': episode_lengths,
-            'best_window_avg': best_window_avg,
-            'best_window_start': best_window_start,
-            'best_window_end': best_window_end,
+            'episode_rewards': episode_rewards,
+            'best_episode_length': best_episode_length,
+            'best_episode_num': best_episode_num,
             'best_q_table': best_q_table
         }
     
     def play_episode(self, render=True):
-        """
-        Play one episode without learning (exploit only)
-        
-        Args:
-            render: bool - Print game state
-        
-        Returns:
-            dict: Episode statistics
-        """
-        # Temporarily disable exploration (epsilon=0)
-        original_epsilon = self.agent.epsilon
         self.agent.epsilon = 0
-        
-        stats = self.run_episode()
-        
-        # Restore original epsilon
-        self.agent.epsilon = original_epsilon
+        stats = self.run_episode(learning=False)
         
         if render:
             print(f"Episode finished: {stats['status']}")
@@ -201,53 +136,30 @@ class Interpreter:
 
     
     def play_episode_gui(self):
-        """
-        Play one episode with graphical interface (pygame)
-        
-        Returns:
-            dict: Episode statistics
-        """
         from src.gui import GUI
         
         gui = GUI(self.game, cell_size=30)
-        
-        original_epsilon = self.agent.epsilon
-        self.agent.epsilon = 0  # No exploration, just exploit
+        self.agent.epsilon = 0
         
         total_reward = 0
         steps = 0
-        max_steps = 500  # Prevent infinite loops from circular behavior
-        
-        # Get initial vision
         vision = self.game.compute_vision()
         gui.render(step=steps, reward=0, status="INIT")
-        
         game_status = "OK"
         
         while True:
-            # Check for quit
             if not gui.handle_events():
                 break
             
-            # Safety timeout to prevent infinite loops
-            if steps >= max_steps:
-                game_status = "TIMEOUT"
-                break
-            
-            # Get action from agent
             action = self.agent.choose_action(vision)
-            
-            # Execute action
             new_vision, reward, status = self.game.step(action)
             total_reward += reward
             steps += 1
             game_status = status
             
-            # Render
             gui.render(step=steps, reward=reward, status=status)
             
             if status != "OK":
-                # Show game over for 2 seconds
                 import time
                 time.sleep(2)
                 break
@@ -255,7 +167,6 @@ class Interpreter:
             vision = new_vision
         
         gui.close()
-        self.agent.epsilon = original_epsilon
         
         return {
             "total_reward": total_reward,
