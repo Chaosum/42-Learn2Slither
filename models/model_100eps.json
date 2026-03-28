@@ -1,0 +1,4555 @@
+{
+  "q_table": {
+    "(0, False, False, 3, False, False, 4, False, False, 5, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 2, False, False, 4, False, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(7, False, True, 2, False, False, 0, False, False, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, True, 0, False, False, 5, False, False, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, True, 0, False, False, 5, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(5, False, False, 4, False, False, 0, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 3, False, False, 6, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.07455600000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(6, False, False, 3, True, False, 0, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.54
+    },
+    "(6, False, False, 3, False, False, 0, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(6, True, False, 3, False, False, 0, False, False, 0, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, True, False, 0, False, False, 9, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -100.0
+    },
+    "(6, False, False, 3, False, False, 0, False, False, 7, True, True)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(6, False, False, 3, False, False, 0, False, False, 6, True, True)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 0, False, False, 3, False, False, 6, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(5, False, False, 4, False, False, 0, False, False, 5, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 4, True, False, 5, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 4, False, False, 5, False, False)": {
+      "UP": 0.26771304000000007,
+      "DOWN": 0.0,
+      "LEFT": -0.10353600000000002,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, False, False, 3, False, False, 0, False, False)": {
+      "UP": -0.10840000000000002,
+      "DOWN": 0.051199999999999996,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 3, False, False, 6, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.015199999999999991,
+      "RIGHT": -0.13756000000000002
+    },
+    "(2, False, False, 7, False, False, 0, False, False, 5, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": -0.07600000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 6, False, False, 4, False, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(2, False, False, 7, False, False, 2, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.07600000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, False, False, 2, False, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(3, False, False, 6, False, False, 0, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.07600000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.07600000000000001
+    },
+    "(3, False, False, 6, False, False, 0, False, False, 5, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": -0.07600000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 4, False, False, 5, False, False)": {
+      "UP": 1.1454708000000002,
+      "DOWN": 0.0,
+      "LEFT": -0.10840000000000002,
+      "RIGHT": -0.04000000000000001
+    },
+    "(2, False, False, 7, False, False, 3, False, False, 0, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": -0.13756000000000002,
+      "LEFT": -0.07600000000000001,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, False, False, 3, False, False, 6, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.10840000000000002,
+      "RIGHT": -0.07600000000000001
+    },
+    "(1, False, False, 8, False, False, 0, False, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.07600000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, False, False, 4, False, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 6, False, False, 3, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.07600000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(3, False, False, 6, False, False, 2, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.07600000000000001,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, False, False, 2, True, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(4, False, False, 5, False, False, 0, True, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, False, False, 3, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.07600000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(4, False, False, 5, False, False, 3, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, False, False, 2, True, False, 0, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 2, False, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.10840000000000002
+    },
+    "(0, False, False, 5, False, False, 3, True, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(4, False, False, 5, False, False, 0, True, False, 5, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 4, False, False, 2, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 2, True, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 38.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, False, False, 1, False, False, 0, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": -0.07600000000000001,
+      "LEFT": -0.07600000000000001,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, False, False, 1, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 4, False, False, 0, False, False, 0, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": -0.07600000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -100.0
+    },
+    "(4, False, False, 0, False, False, 0, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(4, False, False, 0, False, False, 0, False, False, 8, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, False, False, 0, False, False, 8, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(5, False, False, 4, False, False, 0, False, False, 7, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.07600000000000001
+    },
+    "(4, False, False, 0, False, False, 0, False, False, 7, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, False, False, 0, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(4, False, False, 5, False, False, 0, False, False, 5, False, False)": {
+      "UP": -0.04085437,
+      "DOWN": -0.07600000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, False, False, 4, False, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.07600000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(5, False, False, 4, False, False, 0, False, False, 4, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 0, False, False, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 5, False, False, 4, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.07600000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(3, False, False, 6, False, False, 4, False, False, 0, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, False, False, 3, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, False, False, 3, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.07600000000000001
+    },
+    "(0, False, False, 4, False, False, 3, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 3, False, False, 3, False, False, 6, True, True)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 3, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.07600000000000001
+    },
+    "(7, False, False, 2, False, False, 0, False, False, 5, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(7, False, False, 2, False, False, 0, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(7, True, False, 2, False, False, 0, False, False, 3, False, False)": {
+      "UP": 20.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": -0.54
+    },
+    "(6, False, False, 0, False, False, 6, False, False, 3, False, True)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 0, False, False, 5, False, False, 0, False, True)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 3, False, False, 4, False, False, 0, False, True)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 4, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 2, False, False, 0, False, False, 4, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, True, False, 0, False, False, 6, True, False, 3, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 4, False, False, 5, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 3, False, False, 5, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.10070000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.07600000000000001
+    },
+    "(6, True, False, 3, False, False, 0, False, False, 3, False, False)": {
+      "UP": 1.0512000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, True, False, 0, False, False, 6, False, True, 3, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, True, False, 0, False, False, 6, False, False, 3, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, True, False, 0, False, False, 6, False, False, 3, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, True, False, 0, False, False, 6, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.54
+    },
+    "(1, False, False, 8, False, False, 0, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, False, False, 7, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(2, True, False, 7, False, False, 6, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, True, False, 6, False, False, 6, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, False, False, 5, False, False, 0, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": -0.07600000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, False, False, 4, False, True, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(4, False, False, 5, False, False, 0, False, True, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, False, False, 5, True, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 5, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 1.4306000000000003
+    },
+    "(7, False, False, 2, False, False, 0, False, False, 2, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.051199999999999996,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(7, False, False, 2, False, False, 0, False, False, 1, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 0, False, False, 8, False, False, 1, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 0, False, False, 8, True, False, 1, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 8, False, True, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, False, False, 7, False, True, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 7, False, False, 2, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(3, True, False, 6, False, False, 6, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 5, False, False, 4, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(1, False, False, 0, False, False, 5, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.07600000000000001
+    },
+    "(1, True, False, 8, False, False, 0, False, False, 3, False, False)": {
+      "UP": 20.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, False, False, 6, False, False, 3, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": -0.10840000000000002,
+      "RIGHT": -0.10840000000000002
+    },
+    "(0, False, False, 9, False, False, 0, False, False, 2, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, False, False, 5, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.07600000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(2, False, False, 7, False, False, 4, False, False, 0, False, False)": {
+      "UP": 1.7252,
+      "DOWN": 0.0,
+      "LEFT": -0.07600000000000001,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, False, False, 4, True, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 18.024,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 8, False, False, 3, False, False, 0, True, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, False, False, 3, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 7, False, False, 0, False, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, False, False, 0, False, False, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 0, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 4, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, False, False, 4, False, False, 5, True, False)": {
+      "UP": -1.026,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(0, False, False, 0, False, False, 4, False, False, 5, False, False)": {
+      "UP": -100.0,
+      "DOWN": -100.0,
+      "LEFT": -0.10840000000000002,
+      "RIGHT": -0.07600000000000001
+    },
+    "(0, False, False, 9, False, False, 3, False, False, 0, False, False)": {
+      "UP": -100.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 8, False, False, 3, False, False, 0, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(0, False, False, 8, False, False, 0, False, False, 5, True, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 7, False, False, 0, False, False, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 6, False, False, 5, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 5, False, False, 5, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(4, False, False, 5, False, False, 4, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.07600000000000001,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, False, False, 3, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 3, False, False, 6, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.07600000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(1, False, False, 8, False, False, 0, False, False, 4, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(1, False, False, 8, False, False, 0, False, False, 3, True, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, False, False, 5, False, False, 4, False, False)": {
+      "UP": -100.0,
+      "DOWN": -100.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, False, False, 4, False, False, 0, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, False, False, 0, False, False, 1, False, False)": {
+      "UP": -100.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, False, False, 9, True, False, 0, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 3, False, False, 9, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -100.0
+    },
+    "(1, False, False, 8, True, False, 0, False, False, 1, False, False)": {
+      "UP": 1.824,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, True, False, 8, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, True, False, 8, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, True, False, 8, True, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, True, False, 8, False, True, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 3, True, False, 8, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 20.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.54
+    },
+    "(6, False, False, 3, False, False, 0, False, False, 0, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -100.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 0, False, False, 9, False, True, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 4, True, False, 8, False, True, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 8, False, False, 1, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(7, False, False, 2, False, False, 0, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -100.0,
+      "RIGHT": -100.0
+    },
+    "(0, False, False, 1, False, False, 9, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -100.0
+    },
+    "(3, False, False, 0, False, False, 1, False, False, 8, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(3, False, False, 6, False, False, 0, False, False, 7, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(1, False, False, 8, False, False, 3, True, False, 0, False, False)": {
+      "UP": -0.54,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, False, False, 3, False, False, 6, False, False)": {
+      "UP": -100.0,
+      "DOWN": -100.0,
+      "LEFT": -0.10840000000000002,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 9, True, False, 0, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(0, False, False, 9, True, False, 0, False, False, 3, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, False, False, 4, False, False, 5, True, False)": {
+      "UP": -100.0,
+      "DOWN": -100.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(1, False, False, 8, False, False, 3, False, False, 0, False, False)": {
+      "UP": -0.043800000000000006,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 8, False, False, 2, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, False, False, 2, False, False, 7, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(0, False, False, 9, False, False, 0, False, False, 6, True, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 2, False, False, 7, True, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, False, True, 1, False, False, 0, True, False)": {
+      "UP": 0.96,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, True, 1, False, False, 8, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(2, False, False, 7, False, False, 0, False, False, 7, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, False, False, 2, False, False, 7, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 1.0512000000000001,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, False, True, 1, False, False, 8, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(4, False, False, 5, False, False, 0, False, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, False, False, 2, False, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.07600000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(5, False, False, 4, False, False, 0, False, False, 6, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": -0.07600000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 3, False, False, 3, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(6, False, False, 3, False, False, 0, False, False, 5, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 0, False, False, 4, False, False, 5, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(4, False, False, 0, False, False, 5, False, False, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 5, False, False, 4, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(3, False, False, 6, False, False, 0, False, False, 3, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 20.0
+    },
+    "(3, True, False, 6, False, False, 0, True, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, True, False, 5, False, False, 7, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": -0.54
+    },
+    "(4, False, False, 5, False, False, 0, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(4, False, False, 5, False, False, 0, False, False, 0, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": -0.07600000000000001,
+      "LEFT": -100.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 9, True, False, 0, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 9, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 7, False, False, 8, True, False, 0, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, False, False, 8, False, False, 1, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.07600000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 0, False, False, 8, False, False, 1, False, False)": {
+      "UP": -100.0,
+      "DOWN": -100.0,
+      "LEFT": -0.07600000000000001,
+      "RIGHT": -0.07600000000000001
+    },
+    "(0, False, False, 9, True, False, 7, False, False, 0, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, True, 0, False, False, 3, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, False, False, 2, False, False, 0, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(3, False, True, 6, False, False, 0, False, False, 6, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, True, 0, False, False, 3, False, False, 6, True, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, True, 0, False, False, 3, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 7, False, False, 4, False, False, 5, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(2, False, True, 7, False, False, 3, False, False, 0, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 7, False, False, 2, False, False, 0, True, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, False, False, 1, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.07600000000000001,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, False, False, 0, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -100.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 0, False, False, 9, True, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": -100.0,
+      "RIGHT": 0.0
+    },
+    "(8, True, False, 1, False, False, 0, False, False, 4, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 1, False, False, 0, False, False, 3, True, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 0, False, False, 6, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(7, True, False, 2, False, False, 5, False, False, 0, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 2, False, False, 4, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.07600000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 0, False, False, 4, False, False, 5, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 20.0
+    },
+    "(6, False, False, 0, False, False, 0, False, False, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 0, False, False, 5, False, True, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, False, False, 5, False, False, 4, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, False, False, 4, False, False, 0, True, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, False, False, 0, False, False, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, True, False, 4, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, True, False, 3, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, True, False, 3, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 1, False, True, 8, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, False, False, 1, False, False, 8, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 0, False, False, 1, False, False, 8, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": -0.02632000000000001,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, False, False, 7, True, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(9, False, False, 0, False, False, 0, True, False, 1, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 0, False, False, 8, False, False, 1, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 0, False, False, 8, False, False, 1, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(6, False, False, 0, False, False, 9, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -100.0
+    },
+    "(6, False, False, 3, False, False, 8, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 0, False, False, 8, False, False, 1, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(5, False, False, 4, False, False, 7, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 7, False, True, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(4, False, False, 5, False, False, 0, False, True, 1, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 8, False, False, 1, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 8, False, False, 1, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(2, False, False, 7, False, False, 7, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 7, False, False, 6, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.07455600000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, False, False, 6, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.02632000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(3, False, False, 6, False, False, 0, False, False, 2, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 5, False, False, 7, False, True, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, False, False, 7, False, False, 2, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 3, False, False, 7, False, False, 2, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 7, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 2, False, False, 6, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(6, True, False, 0, False, False, 5, False, False, 4, False, False)": {
+      "UP": 20.0,
+      "DOWN": 0.0,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 3, False, False, 4, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(6, False, True, 3, False, False, 3, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, True, 2, False, False, 3, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, True, 1, False, False, 3, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, True, 0, False, False, 3, True, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 20.0,
+      "RIGHT": 0.0
+    },
+    "(9, False, False, 0, False, False, 2, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -100.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 4, False, False, 4, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.07600000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 4, False, True, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(7, False, False, 2, False, False, 0, False, True, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 0, False, False, 5, False, False, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 0, False, False, 5, False, False, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(5, False, False, 4, False, False, 0, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.07600000000000001
+    },
+    "(5, True, False, 4, False, False, 0, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, True, False, 3, False, False, 8, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.54
+    },
+    "(0, False, False, 2, False, False, 9, False, True, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(7, True, False, 2, False, False, 8, False, True, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 2, False, False, 7, False, True, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 2, False, False, 6, False, True, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 0, False, False, 6, False, False, 3, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(5, False, False, 0, False, False, 6, False, False, 3, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 6, False, False, 3, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, False, False, 5, False, False, 0, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, False, False, 4, False, False, 0, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, False, False, 3, False, False, 0, True, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, False, False, 4, False, False, 5, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.07600000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 9, False, False, 0, False, False, 4, True, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, True, 6, False, False, 5, True, False, 4, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, True, 5, False, False, 5, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 2, False, False, 2, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 0, False, False, 2, False, False, 7, False, False)": {
+      "UP": 0.31080308000000006,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 3, False, False, 1, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 0, False, False, 1, False, False, 8, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.07600000000000001
+    },
+    "(5, True, False, 4, False, False, 0, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": -100.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 7, True, False, 0, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -1.026
+    },
+    "(2, False, False, 7, False, False, 0, False, False, 2, False, False)": {
+      "UP": -0.06675840000000001,
+      "DOWN": -0.07600000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 6, False, False, 7, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 5, False, False, 7, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, True, False, 6, False, False, 0, False, False)": {
+      "UP": 1.824,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, True, False, 6, False, False, 3, False, False)": {
+      "UP": 1.9152,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, True, False, 6, False, False, 3, False, False)": {
+      "UP": 1.9152,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -1.026
+    },
+    "(1, False, False, 0, True, False, 6, False, True, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 8, False, False, 5, False, True, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, False, False, 7, False, True, 2, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, False, False, 7, False, False, 2, False, False)": {
+      "UP": -271.0,
+      "DOWN": -100.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, False, False, 0, True, False, 0, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": -100.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, False, False, 2, False, False, 7, False, True)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, False, False, 2, True, False, 7, True, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, False, False, 2, False, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.07600000000000001,
+      "RIGHT": 0.0
+    },
+    "(4, True, False, 5, False, False, 0, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -100.0,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 2, False, False, 0, False, False, 3, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": -0.07600000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.07600000000000001
+    },
+    "(0, False, False, 1, False, False, 6, False, False, 3, False, True)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(8, False, False, 1, False, False, 0, False, False, 2, False, True)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, True, 4, False, False, 0, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, True, 3, False, False, 7, True, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 3, False, False, 6, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 6, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.02632000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 1, False, False, 6, False, False, 3, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 1.824
+    },
+    "(8, False, True, 1, False, False, 0, False, False, 2, True, False)": {
+      "UP": -0.54,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, False, True, 0, False, False, 7, False, False, 2, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, True, 0, False, False, 7, True, False, 2, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(6, False, False, 3, True, False, 0, True, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, True, False, 8, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(7, False, True, 2, False, False, 7, False, False, 0, False, False)": {
+      "UP": 0.051199999999999996,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, True, 0, False, False, 7, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 4, False, False, 6, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 6, False, False, 3, False, True)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, False, False, 5, False, False, 0, False, True)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 7, False, False, 0, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, False, False, 6, False, False, 3, False, True)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, False, False, 6, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 3, False, False, 6, True, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, True, 0, False, False, 7, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": -100.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 3, False, False, 2, True, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 3, False, False, 1, True, False, 0, False, False)": {
+      "UP": -0.54,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 3, False, False, 3, True, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 2, False, True, 0, False, False, 5, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 0, False, True, 4, True, False, 5, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 0, False, True, 4, False, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 4, False, False, 3, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 3, False, False, 2, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 1, False, False, 8, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(7, True, False, 2, False, False, 0, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, True, False, 1, False, False, 0, False, False, 9, False, True)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, True, False, 0, False, False, 0, False, False, 9, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.54
+    },
+    "(9, False, False, 0, False, False, 0, False, False, 8, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 0, False, False, 1, False, False, 8, False, True)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(8, True, False, 1, False, False, 0, False, False, 0, False, True)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, True, False, 0, False, False, 0, False, False, 9, False, False)": {
+      "UP": 20.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 0, False, False, 0, False, False, 9, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 0, False, False, 0, False, False, 9, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -100.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 0, False, False, 9, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(4, False, False, 5, False, False, 0, False, False, 8, True, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 1, False, False, 8, True, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 1, False, False, 8, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(2, False, False, 7, False, False, 0, False, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(2, False, False, 7, False, False, 0, False, False, 6, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 8, False, True, 0, False, False, 5, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, False, True, 4, False, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.051199999999999996
+    },
+    "(0, False, False, 8, True, False, 0, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, True, False, 5, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": 20.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, False, True, 4, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.035136,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 2, False, False, 7, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.07600000000000001
+    },
+    "(2, False, False, 0, False, False, 0, False, False, 6, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, False, False, 2, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 8, False, False, 1, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 8, False, False, 0, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, False, False, 0, False, False, 9, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": -100.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 1, False, False, 5, False, False, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, True, False, 0, False, False, 4, False, False, 5, False, False)": {
+      "UP": 20.1767,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, False, True, 0, False, False, 4, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, False, False, 8, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.07600000000000001
+    },
+    "(0, False, False, 3, False, False, 9, False, True, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -100.0
+    },
+    "(0, False, False, 2, False, False, 7, True, False, 2, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 1, False, False, 7, True, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 1.824
+    },
+    "(8, False, False, 1, False, False, 0, True, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(8, False, False, 1, False, False, 0, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -100.0
+    },
+    "(6, True, False, 3, False, False, 0, False, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": 1.824,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, True, False, 2, False, False, 4, False, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(7, False, True, 2, False, False, 3, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, True, 0, False, False, 3, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.051199999999999996
+    },
+    "(0, True, False, 1, False, False, 4, False, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.54
+    },
+    "(8, False, False, 1, False, False, 0, False, False, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 0, False, False, 5, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 1.0827860000000002
+    },
+    "(0, True, False, 1, False, False, 6, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, True, False, 0, False, False, 6, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": -100.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 1, False, False, 0, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.07600000000000001,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 1, False, False, 0, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, False, False, 7, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, False, False, 6, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 8, False, False, 6, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, False, False, 6, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 8, False, False, 0, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 7, False, False, 5, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, False, False, 0, False, False, 3, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(2, False, False, 0, False, False, 6, False, False, 3, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(2, False, False, 7, True, False, 0, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 1.0512000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, False, False, 7, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 7, False, False, 2, False, False)": {
+      "UP": -0.071136,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, False, False, 7, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.047551999999999976
+    },
+    "(0, False, False, 0, True, False, 8, True, False, 1, False, False)": {
+      "UP": -190.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, False, False, 6, False, False, 3, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 1.824
+    },
+    "(4, False, False, 5, False, False, 0, False, False, 2, True, False)": {
+      "UP": -0.54,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 7, False, True, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 7, False, False, 6, False, True, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 6, True, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 1, False, False, 6, False, False, 3, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.06301350000000001,
+      "RIGHT": 0.0
+    },
+    "(9, False, False, 0, False, False, 0, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": -100.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 7, False, False, 0, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -100.0
+    },
+    "(0, False, False, 6, False, False, 9, False, True, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -100.0
+    },
+    "(5, True, False, 4, False, False, 7, False, False, 0, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, True, False, 0, False, False, 7, True, False, 2, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, True, False, 0, False, False, 7, False, False, 2, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.54
+    },
+    "(2, True, False, 0, False, True, 7, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, False, False, 6, True, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": -1.026,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, False, False, 6, False, False, 3, False, True)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 4, False, False, 5, False, False, 0, False, True)": {
+      "UP": -0.07600000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 5, True, False, 4, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 1, False, False, 5, False, False, 0, False, False)": {
+      "UP": 0.15704330000000005,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 0, False, False, 6, False, False, 3, False, True)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.07600000000000001,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 3, False, False, 0, False, False, 3, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, False, False, 4, True, False, 0, False, False)": {
+      "UP": -0.5270135000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 8, False, False, 0, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, False, False, 2, False, False, 7, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(1, False, False, 8, True, False, 1, False, False, 0, False, False)": {
+      "UP": 1.824,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, True, False, 1, False, False, 8, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, False, False, 0, False, False, 0, True, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, True, 7, True, False, 5, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, True, 6, True, False, 5, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, True, 5, True, False, 5, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, True, 4, True, False, 5, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": 20.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, True, 3, False, False, 5, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, True, 2, False, False, 5, False, False, 4, True, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, True, 1, False, False, 5, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, True, 0, False, False, 5, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": -100.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 3, False, False, 2, False, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 2, False, False, 2, False, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(7, False, True, 2, False, False, 0, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(6, False, False, 0, False, False, 4, False, False, 5, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(5, False, True, 4, False, False, 3, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 3, False, False, 6, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.07980000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(4, False, False, 0, False, False, 6, False, False, 3, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 6, False, False, 3, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(1, False, False, 0, False, False, 6, False, False, 3, False, True)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(1, False, False, 8, True, False, 0, False, False, 2, False, True)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, True, False, 7, True, False, 2, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 1, False, False, 8, False, False, 1, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 0, False, False, 8, False, True, 1, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, False, False, 7, False, False, 0, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.051199999999999996,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 7, False, False, 2, True, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, True, False, 2, False, False, 3, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 1, False, False, 2, False, False, 7, True, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, False, False, 2, False, False, 7, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(9, True, False, 0, False, False, 0, False, False, 6, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, True, False, 0, False, False, 3, False, False, 6, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(8, False, False, 1, False, False, 0, False, False, 5, True, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 4, False, False, 0, False, False, 1, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 3, False, False, 8, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 3, False, False, 7, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 0, False, False, 7, False, False, 2, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.07600000000000001
+    },
+    "(4, False, False, 0, False, False, 8, False, False, 1, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(3, False, False, 0, False, False, 8, False, True, 1, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 8, True, False, 1, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, False, False, 9, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, False, False, 9, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, False, False, 8, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 7, False, True, 2, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 7, True, False, 2, False, False)": {
+      "UP": -0.5307584000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(1, False, False, 8, True, False, 6, False, False, 0, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, True, False, 6, True, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 3.724,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, False, False, 5, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 18.96,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, True, False, 3, False, False, 0, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, False, True, 2, False, False, 0, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, False, False, 9, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, False, False, 8, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.034312920000000004,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 8, False, True, 7, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 8, False, False, 6, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, False, False, 5, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, True, False, 4, False, False, 0, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, True, False, 0, False, False, 8, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.54
+    },
+    "(0, False, False, 9, False, False, 0, False, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 9, False, False, 0, False, False, 6, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, True, 4, False, False, 5, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, True, 0, False, False, 5, False, False, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, True, 0, False, False, 5, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(2, False, False, 7, False, False, 0, True, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(2, True, False, 7, False, False, 0, True, False, 0, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, True, False, 0, False, False, 9, False, True, 0, False, False)": {
+      "UP": 20.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, False, False, 9, False, False, 0, False, False)": {
+      "UP": -271.0,
+      "DOWN": -100.0,
+      "LEFT": -0.07600000000000001,
+      "RIGHT": -100.0
+    },
+    "(4, False, False, 5, True, True, 1, False, False, 0, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, True, True, 1, False, False, 8, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.54
+    },
+    "(1, False, False, 0, False, False, 2, False, False, 7, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 8, True, True, 1, False, False, 0, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, True, True, 1, False, False, 8, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, False, False, 0, False, False, 9, True, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 1, False, False, 0, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -100.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, True, False, 0, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 1.824,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 8, True, False, 0, False, False, 9, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": -0.54
+    },
+    "(1, False, False, 8, False, False, 0, False, False, 8, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, True, False, 0, False, False, 9, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, True, False, 0, False, False, 9, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -100.0,
+      "RIGHT": 0.0
+    },
+    "(9, False, False, 0, False, False, 5, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 0, False, False, 5, False, False, 4, False, False)": {
+      "UP": 0.11523000000000004,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, True, True, 2, False, False, 0, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(7, True, False, 2, False, False, 0, False, False, 1, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, True, False, 0, False, False, 8, False, False, 1, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, True, False, 0, False, False, 8, False, False, 1, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.54
+    },
+    "(4, True, False, 5, False, False, 7, False, False, 0, False, False)": {
+      "UP": 1.0512000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, False, False, 0, False, False, 1, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 5, False, False, 8, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.027510160000000006,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, False, False, 6, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, False, False, 5, False, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 1, False, False, 4, False, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.051199999999999996,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 1, False, False, 3, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.043800000000000006,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 0, False, False, 3, False, False, 6, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(6, False, False, 0, False, False, 3, False, False, 6, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, True, 4, False, False, 1, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, True, 0, False, False, 1, False, False, 8, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, False, False, 5, False, True, 4, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, False, False, 0, False, False, 0, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": -100.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 4, True, False, 0, False, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.54
+    },
+    "(2, False, False, 0, False, False, 4, False, False, 5, False, True)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 0, False, False, 8, True, False, 1, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 20.0
+    },
+    "(6, False, False, 3, False, False, 0, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 0, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(9, False, False, 0, False, False, 8, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 0, False, False, 8, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 0, False, False, 8, True, False, 1, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, True, 4, False, False, 7, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, True, 3, False, False, 7, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(0, False, False, 3, False, False, 0, True, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(9, False, True, 0, False, False, 7, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -100.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, False, False, 1, False, False, 0, True, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, False, False, 1, False, False, 8, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, False, False, 1, False, False, 8, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(5, True, False, 4, False, False, 0, False, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(5, True, False, 4, False, False, 0, False, False, 4, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, True, False, 0, False, False, 5, False, False, 4, False, False)": {
+      "UP": 20.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 5, True, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(3, False, False, 6, False, False, 0, True, False, 3, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 6, True, False, 3, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, False, True, 0, False, False, 2, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 0, False, False, 9, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 3, False, False, 6, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 3, False, False, 5, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.23826000000000006,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 3, False, False, 0, False, False, 2, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 7, False, True, 2, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(4, False, False, 5, False, False, 0, False, True, 1, True, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, True, False, 3, False, False, 9, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, True, False, 2, False, False, 9, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, True, False, 1, False, False, 9, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, True, False, 0, False, False, 9, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -100.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, False, True, 1, False, False, 0, False, False, 3, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, False, True, 0, False, False, 6, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(6, False, False, 0, False, False, 7, False, False, 2, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 4, False, False, 9, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -100.0
+    },
+    "(4, False, False, 5, False, False, 3, False, False, 0, False, True)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 3, True, False, 6, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, False, False, 2, False, False, 0, False, False)": {
+      "UP": -190.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 1, False, False, 8, True, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 1, False, False, 1, False, False, 8, False, False)": {
+      "UP": -0.03855600000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(9, False, False, 0, False, False, 0, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -100.0,
+      "RIGHT": 0.0
+    },
+    "(9, False, False, 0, False, False, 3, False, False, 0, True, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 0, False, False, 3, False, False, 6, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 3, False, False, 0, False, False, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 5, False, True, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, False, False, 3, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -0.04000000000000001
+    },
+    "(0, False, False, 5, False, False, 3, False, True, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, True, False, 3, False, False, 2, False, False, 0, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, True, False, 0, False, False, 2, False, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.54
+    },
+    "(4, False, False, 0, False, False, 3, False, True, 6, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(4, True, False, 5, False, False, 2, False, True, 0, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, True, False, 0, False, False, 2, False, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, False, True, 1, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, True, 1, False, False, 8, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, False, True, 1, False, False, 8, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 20.0
+    },
+    "(1, False, False, 8, False, False, 0, False, False, 7, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(5, False, False, 0, False, False, 2, False, False, 7, False, False)": {
+      "UP": 1.2567816000000003,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 0, False, False, 9, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -100.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, False, False, 0, False, False, 9, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, False, False, 0, False, False, 9, True, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 9, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 1, False, False, 9, True, False, 0, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(9, True, False, 0, False, False, 0, False, False, 1, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, True, False, 0, False, False, 8, True, False, 1, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, True, False, 0, False, False, 8, False, False, 1, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.54
+    },
+    "(1, False, True, 0, True, False, 8, True, False, 1, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, True, False, 8, False, False, 1, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 0, False, False, 9, False, True)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 9, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": -100.0
+    },
+    "(3, False, False, 0, False, False, 8, True, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(3, True, False, 6, False, False, 7, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, True, False, 4, False, False, 7, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, True, False, 3, False, False, 7, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, True, False, 2, False, False, 7, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(7, False, True, 2, False, False, 6, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, True, 0, False, False, 6, False, False, 3, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.027013500000000003,
+      "RIGHT": 0.0
+    },
+    "(7, False, True, 2, False, False, 0, False, False, 3, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, True, 0, False, False, 6, False, False, 3, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, True, 0, False, False, 6, False, False, 3, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, True, 0, False, False, 6, True, False, 3, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 6, False, True, 3, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 20.0
+    },
+    "(2, False, False, 7, False, False, 0, False, True, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, False, False, 7, True, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, False, False, 6, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, False, False, 6, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 4, False, False, 5, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 3, False, False, 3, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, True, False, 3, False, False, 1, False, False, 0, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, True, False, 0, False, False, 1, False, False, 8, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, True, False, 0, False, False, 1, False, False, 8, False, False)": {
+      "UP": 20.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, True, False, 0, False, False, 1, False, False, 8, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, True, False, 0, False, False, 1, False, True, 8, False, False)": {
+      "UP": 20.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 8, False, True, 0, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, False, False, 0, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, False, False, 0, False, False, 9, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, False, False, 0, False, False, 9, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, False, False, 0, False, False, 9, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -100.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 3, False, False, 0, False, False, 9, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 0, False, False, 9, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 1, False, False, 0, False, False, 9, True, True)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -100.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 7, True, False, 0, False, False, 5, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, True, False, 4, False, False, 5, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, True, False, 4, False, False, 5, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 2, False, False, 0, False, False, 7, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 2, False, False, 7, False, False)": {
+      "UP": 0.006079999999999988,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 7, True, False, 0, False, False, 6, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, True, False, 3, False, False, 6, False, True)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, True, False, 3, False, False, 6, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 9, False, False, 0, False, False)": {
+      "UP": -0.07600000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 9, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.07600000000000001,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, False, False, 9, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, True, False, 0, False, False, 3, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, True, False, 6, False, True, 3, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, True, False, 6, False, False, 3, False, False)": {
+      "UP": 1.9152,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, True, False, 6, False, False, 3, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(9, False, False, 0, False, False, 4, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 0, False, False, 4, False, False, 5, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 0, False, False, 4, False, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 2, False, False, 3, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 0, False, False, 3, False, True, 6, True, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, False, False, 1, False, False, 8, True, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 3, False, False, 1, False, False, 8, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 1, False, False, 8, False, True)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, False, False, 1, False, False, 8, True, False)": {
+      "UP": 0.0,
+      "DOWN": -100.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, False, False, 6, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, False, False, 6, True, False, 3, False, True)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, False, False, 6, True, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(5, False, False, 4, False, False, 0, True, False, 2, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 7, True, False, 2, False, True)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(4, False, False, 5, False, False, 0, True, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.96
+    },
+    "(2, False, False, 7, False, False, 8, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, False, False, 8, False, True, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.038681628,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, True, False, 6, False, True, 3, False, False)": {
+      "UP": 1.0512000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 8, False, False, 0, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, False, False, 8, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(5, False, False, 4, True, False, 5, False, False, 0, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, True, False, 5, False, True, 4, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, True, False, 5, False, False, 4, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, True, False, 5, False, False, 4, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, True, False, 5, True, False, 4, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, True, False, 5, False, False, 4, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 8, False, False, 8, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, False, False, 8, False, False, 1, False, True)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, False, False, 8, True, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 8, True, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 1, False, False, 7, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 0, False, False, 7, True, False, 2, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 0, False, False, 6, True, False, 3, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, False, False, 5, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, True, False, 4, False, False, 0, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, True, False, 4, False, False, 5, False, True)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, True, False, 4, False, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 7, True, False, 2, False, False, 0, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, True, False, 2, False, False, 7, False, True)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, True, False, 2, False, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.54
+    },
+    "(4, False, False, 5, False, False, 0, False, False, 6, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 3, False, False, 6, False, True)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, True, False, 2, False, False, 7, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, True, False, 2, False, False, 7, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(9, False, False, 0, False, False, 0, False, False, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 0, False, False, 5, True, False, 4, False, False)": {
+      "UP": -0.4214837,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, True, False, 1, False, False, 0, True, False, 1, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, True, False, 0, False, False, 8, False, True, 1, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, True, False, 0, False, False, 8, False, False, 1, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, True, False, 0, False, False, 8, False, False, 1, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, True, False, 0, False, False, 8, False, False, 1, False, False)": {
+      "UP": 20.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 8, False, False, 7, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, False, False, 4, True, False, 5, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 1, False, False, 4, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 0, False, False, 4, False, False, 5, True, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 3, False, False, 6, True, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 1, False, False, 3, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": -0.04000000000000001
+    },
+    "(8, False, False, 1, False, False, 0, False, False, 5, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 2, False, False, 3, False, False, 0, True, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(9, False, False, 0, False, False, 0, False, False, 5, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 0, False, False, 2, False, False, 7, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 0, False, False, 2, False, False, 7, True, False)": {
+      "UP": -0.5270135000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 1, False, False, 8, False, True)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 1, False, False, 8, True, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, False, False, 2, False, False, 7, True, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, False, False, 2, False, False, 7, False, True)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 1, False, False, 7, False, False, 2, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(9, False, False, 0, False, False, 6, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 0, False, False, 6, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.04000000000000001,
+      "RIGHT": 0.0
+    },
+    "(8, True, False, 1, False, False, 5, False, False, 0, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, True, False, 0, False, False, 5, False, False, 4, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 4, True, False, 5, False, True)": {
+      "UP": -0.5226879980000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 8, False, False, 2, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.051199999999999996,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, True, False, 1, False, False, 0, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, False, True, 5, False, False, 0, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 2, False, False, 7, False, True)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, False, False, 1, False, False, 0, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, True, 3, False, False, 0, False, False, 1, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 9, True, True, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 1, False, False, 8, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 0, False, False, 9, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 0, False, False, 9, True, True, 0, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 0, False, False, 9, False, False, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, True, False, 7, False, False, 0, False, False, 0, False, False)": {
+      "UP": 20.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, False, False, 9, False, True, 0, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 8, True, False, 0, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, True, False, 3, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, True, False, 3, False, False, 6, False, True)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, True, False, 3, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 3, True, False, 3, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.96,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, True, False, 3, False, False, 6, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.96,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 2, False, False, 2, False, False, 0, True, False)": {
+      "UP": -0.5173653000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 2, False, False, 7, False, True)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 7, False, False, 1, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, False, False, 1, False, False, 8, False, True)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, True, False, 6, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.54,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, True, False, 0, False, False, 3, False, False)": {
+      "UP": 1.0512000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, True, False, 6, False, False, 0, False, False)": {
+      "UP": 1.0512000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, False, False, 4, True, False, 0, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, False, False, 0, False, False, 4, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, True, False, 0, False, False, 0, False, False, 9, False, True)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, True, False, 0, False, False, 0, False, False, 9, True, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, True, False, 0, False, False, 0, False, False, 9, False, False)": {
+      "UP": 0.96,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, True, False, 0, False, False, 0, False, False, 9, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -100.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, False, False, 0, False, False, 3, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 8, False, True, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, False, False, 8, True, False, 1, False, False)": {
+      "UP": -0.5438000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 0, False, False, 5, False, True, 4, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 4, False, False, 5, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 4, True, False, 5, False, False)": {
+      "UP": -0.41446585999999996,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, False, False, 2, True, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 3, False, False, 0, False, False, 6, False, False)": {
+      "UP": -0.04000000000000001,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 2, True, False, 7, False, False)": {
+      "UP": -0.54,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 8, False, False, 0, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, False, False, 4, True, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.54,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, False, False, 4, False, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 2, False, False, 5, False, True, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.04000000000000001,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(9, False, False, 0, False, False, 0, False, True, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -100.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, False, False, 8, False, False, 0, False, False)": {
+      "UP": -100.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 0, False, False, 9, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 0, False, False, 3, False, False, 6, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, False, False, 3, False, False, 6, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, True, 7, False, False, 2, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, True, 0, False, False, 2, False, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, False, False, 2, False, False, 7, False, True)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, False, False, 3, True, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, False, False, 5, True, False, 4, False, True)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, False, False, 5, False, False, 4, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, True, 1, False, False, 6, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, True, 0, False, False, 6, False, False, 3, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 0, False, False, 5, True, False, 4, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, False, False, 0, False, False, 8, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 7, False, False, 0, False, False, 0, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 5, False, False, 0, False, False, 6, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, False, False, 5, False, True, 4, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, True, 3, False, False, 3, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 2, False, False, 1, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 0, False, False, 1, False, False, 8, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 1, False, False, 8, True, True)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 7, False, False, 0, False, False, 8, True, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, False, False, 5, False, False, 4, False, True)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(9, True, False, 0, False, False, 0, True, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(8, False, False, 0, False, False, 7, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(7, False, False, 0, False, False, 7, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 0, False, False, 7, False, True, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, False, False, 7, False, False, 2, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 5, False, False, 0, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 4, False, False, 8, False, True, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, True, False, 0, False, False, 0, False, True, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, True, False, 0, False, False, 9, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, True, False, 0, False, False, 9, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(6, False, False, 3, True, False, 0, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(5, False, False, 0, True, False, 8, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(4, False, False, 0, True, False, 8, False, True, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 0, True, False, 8, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, True, False, 8, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, True, False, 8, False, False, 1, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 9, False, False, 7, False, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    }
+  },
+  "epsilon": 0,
+  "learning_rate": 0.1,
+  "discount_factor": 0.95
+}
