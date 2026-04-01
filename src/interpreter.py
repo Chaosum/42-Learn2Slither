@@ -47,28 +47,23 @@ class Interpreter:
             from src.gui import GUI
         
         for episode in range(episodes):
-            # Epsilon decay: 1.0 → 0.05 gradually over all episodes (maintain exploration)
             self.agent.epsilon = max(0.05, 1.0 - (episode / episodes) * 0.95)
-            
-            # Reset game for new episode
+
             self.game = type(self.game)(self.game.mapsize)
-            
-            # Initialize or update GUI
+
             if gui:
                 if gui_instance is None:
                     gui_instance = GUI(self.game, cell_size=20)
                 else:
-                    # Update GUI game reference for new episode
                     gui_instance.game = self.game
             
             total_reward = 0
             steps = 0
-            max_length = 1  # Snake starts at length 1
+            max_length = 1
             game_status = None
-            
-            # Get initial vision
+
             vision = self.game.compute_vision()
-            
+
             if gui:
                 gui_instance.render(step=0, reward=0, status="START")
             

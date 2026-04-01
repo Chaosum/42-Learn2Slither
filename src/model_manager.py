@@ -23,10 +23,10 @@ class ModelManager:
         """
         filepath = self.MODELS_DIR / f"{name}.json"
         
-        # Convert Q-table to JSON-serializable format
+        
         q_table_serializable = {}
         for state_key, actions in agent.q_table.items():
-            # Convert tuple keys to strings
+            
             state_str = str(state_key)
             q_table_serializable[state_str] = actions
         
@@ -63,15 +63,14 @@ class ModelManager:
             with open(filepath, "r") as f:
                 data = json.load(f)
             
-            # Restore Q-table
+            
             agent.q_table = {}
             for state_str, actions in data["q_table"].items():
-                # Convert string keys back to tuples
+                
                 state_tuple = eval(state_str)
                 agent.q_table[state_tuple] = actions
             
-            # Restore hyperparameters
-            agent.epsilon = 0  # Set to 0 for deterministic testing (no exploration)
+            agent.epsilon = 0
             agent.learning_rate = data.get("learning_rate", 0.1)
             agent.discount_factor = data.get("discount_factor", 0.95)
             

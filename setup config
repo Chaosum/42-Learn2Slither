@@ -1,0 +1,8 @@
+docker build -t mlt_image .
+xhost +local:root
+docker run --rm -it \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  -v "$PWD":/app \
+  --workdir /app \
+  mlt_image

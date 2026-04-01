@@ -1,0 +1,97 @@
+{
+  "q_table": {
+    "(0, False, False, 9, False, False, 2, False, False, 0, False, True)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.06
+    },
+    "(0, False, False, 9, False, False, 1, False, False, 0, False, True)": {
+      "UP": 0.0,
+      "DOWN": -0.03,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 8, False, False, 1, False, False, 8, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.06
+    },
+    "(1, False, False, 8, False, False, 0, False, False, 7, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.06
+    },
+    "(1, False, False, 8, True, False, 0, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.81
+    },
+    "(1, False, False, 8, False, False, 0, False, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.03,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, False, False, 4, True, False, 5, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 30.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 7, False, False, 3, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": -0.78,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(0, False, False, 6, False, False, 3, False, False, 6, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": -0.09000000000000001,
+      "RIGHT": 0.0
+    },
+    "(3, False, False, 6, False, False, 2, False, False, 0, False, False)": {
+      "UP": -0.06,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 0, False, False, 2, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 1.41,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 7, False, False, 1, True, False, 0, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 29.97,
+      "RIGHT": 0.0
+    },
+    "(2, False, False, 7, True, False, 0, False, False, 0, True, False)": {
+      "UP": 1.44,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    },
+    "(1, False, False, 0, True, False, 0, False, False, 9, False, False)": {
+      "UP": 0.0,
+      "DOWN": 0.0,
+      "LEFT": 0.0,
+      "RIGHT": -0.78
+    },
+    "(1, False, False, 0, False, False, 0, False, False, 8, False, False)": {
+      "UP": 0.0,
+      "DOWN": -150.0,
+      "LEFT": 0.0,
+      "RIGHT": 0.0
+    }
+  },
+  "epsilon": 1.0,
+  "learning_rate": 0.15,
+  "discount_factor": 0.95
+}

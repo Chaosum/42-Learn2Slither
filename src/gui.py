@@ -21,11 +21,10 @@ class GUI:
         self.paused = False
         self.step_requested = False
         
-        # Load last speed preference
         self.last_speed = self.load_speed()
         self.delay_ms = self._speed_to_ms(self.last_speed)
         
-        # Colors
+        
         self.WHITE = "#FFFFFF"
         self.BLACK = "#000000"
         self.GRAY = "#C8C8C8"
@@ -34,21 +33,21 @@ class GUI:
         self.BLUE = "#0000FF"
         self.DARK_BLUE = "#00008B"
         
-        # Calculate window size
+        
         map_width = len(game.map[0])
         map_height = len(game.map)
         canvas_width = map_width * cell_size
         canvas_height = map_height * cell_size
         
-        # Create window
+        
         self.root = tk.Tk()
         self.root.title("Learn2Slither - Snake Game")
-        # Add extra width for controls on the side
+        
         window_width = canvas_width + 300
         self.root.geometry(f"{window_width}x{canvas_height + 150}")
         self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
         
-        # Create canvas
+        
         self.canvas = Canvas(
             self.root,
             width=canvas_width,
@@ -57,11 +56,11 @@ class GUI:
         )
         self.canvas.pack()
         
-        # Create info frame
+        
         self.info_frame = tk.Frame(self.root, height=60, bg="#F0F0F0")
         self.info_frame.pack(fill=tk.X)
         
-        # Info label
+        
         self.info_label = tk.Label(
             self.info_frame,
             text="",
@@ -70,11 +69,11 @@ class GUI:
         )
         self.info_label.pack(anchor=tk.W, padx=10, pady=5)
         
-        # Create control frame
+        
         self.control_frame = tk.Frame(self.root, bg="#E0E0E0")
         self.control_frame.pack(fill=tk.X, padx=10, pady=10)
         
-        # Speed control (1-5 scale: 100ms to 500ms)
+        
         speed_frame = Frame(self.control_frame)
         speed_frame.pack(side=tk.LEFT, padx=10)
         
@@ -90,7 +89,7 @@ class GUI:
             command=self.update_speed,
             showvalue=True
         )
-        self.speed_slider.set(self.last_speed)  # Use last saved speed
+        self.speed_slider.set(self.last_speed)
         self.speed_slider.pack(side=tk.LEFT, padx=5)
         
         self.speed_label = tk.Label(
@@ -102,7 +101,7 @@ class GUI:
         )
         self.speed_label.pack(side=tk.LEFT)
         
-        # Pause/Step buttons
+        
         button_frame = Frame(self.control_frame)
         button_frame.pack(side=tk.LEFT, padx=10)
         
@@ -148,14 +147,14 @@ class GUI:
     
     def _speed_to_ms(self, speed_value):
         """Convert speed scale (1-5) to milliseconds"""
-        speeds = {1: 500, 2: 400, 3: 300, 4: 200, 5: 0}
-        return speeds.get(speed_value, 300)
+        speeds = {1: 80, 2: 60, 3: 40, 4: 20, 5: 0}
+        return speeds.get(speed_value, 40)
     
     def update_speed(self, value):
         """Update the delay based on slider value (1=500ms slow, 5=0ms instant)"""
         scale_value = int(value)
         self.last_speed = scale_value
-        self.save_speed()  # Save preference immediately
+        self.save_speed()
         self.delay_ms = self._speed_to_ms(scale_value)
         self.speed_label.config(text=f"{self.delay_ms}ms")
     
@@ -183,8 +182,7 @@ class GUI:
             status: Game status message
         """
         self.canvas.delete("all")
-        
-        # Draw grid
+    
         map_grid = self.game.map
         for y, row in enumerate(map_grid):
             for x, cell in enumerate(row):
@@ -193,10 +191,8 @@ class GUI:
                 x2 = x1 + self.cell_size
                 y2 = y1 + self.cell_size
                 
-                # Draw cell border
                 self.canvas.create_rectangle(x1, y1, x2, y2, outline=self.GRAY)
-                
-                # Draw wall
+
                 if cell == "W":
                     self.canvas.create_rectangle(
                         x1, y1, x2, y2,
@@ -204,7 +200,7 @@ class GUI:
                         outline=self.BLACK
                     )
         
-        # Draw apples
+        
         for apple_type, (x, y) in self.game.apples:
             x1 = x * self.cell_size + 3
             y1 = y * self.cell_size + 3
@@ -213,7 +209,7 @@ class GUI:
             color = self.GREEN if apple_type == "G" else self.RED
             self.canvas.create_oval(x1, y1, x2, y2, fill=color, outline=color)
         
-        # Draw snake
+        
         for i, (x, y) in enumerate(self.game.snake.body):
             x1 = x * self.cell_size + 1
             y1 = y * self.cell_size + 1
@@ -226,7 +222,7 @@ class GUI:
                 outline=color
             )
         
-        # Update info label
+        
         status_text = status if status else "Running"
         if self.paused:
             status_text += " [PAUSED]"
@@ -239,25 +235,25 @@ class GUI:
         )
         self.info_label.config(text=info_text)
         
-        # Update display
+        
         self.root.update()
         
-        # Wait with delay control
+        
         self.wait_with_controls()
     
     def wait_with_controls(self):
         """Wait for the specified delay while handling pause/step controls"""
         if self.paused:
-            # In pause mode, wait for step button or resume click
+            
             self.step_requested = False
             while not self.step_requested and self.running and self.paused:
                 try:
                     self.root.update()
-                    self.root.after(50)  # Update every 50ms
+                    self.root.after(50)
                 except:
                     break
         else:
-            # In running mode, wait with delay (0ms = no wait)
+            
             if self.delay_ms > 0:
                 try:
                     self.root.after(self.delay_ms)
@@ -265,7 +261,7 @@ class GUI:
                 except:
                     pass
             else:
-                # No delay, just update
+                
                 try:
                     self.root.update()
                 except:

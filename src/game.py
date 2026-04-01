@@ -14,7 +14,6 @@ class Game:
             for i in range(mapsize + 2)
         ]
         snake_pos, initial_direction = self.generate_snake_position()
-        # Original config: 2 green + 1 red
         self.apples.append(("G", self.generate_apples("G")))
         self.apples.append(("G", self.generate_apples("G")))
         self.apples.append(("R", self.generate_apples("R")))
@@ -33,7 +32,7 @@ class Game:
             if pos not in occupied:
                 return pos
         
-        # Fallback: brute force search
+        
         for y in range(1, self.mapsize + 1):
             for x in range(1, self.mapsize + 1):
                 if (x, y) not in occupied:
@@ -100,7 +99,7 @@ class Game:
                 elif pos in red_positions and red_dist == self.mapsize + 1:
                     red_dist = distance
             
-            # Original format: (obstacle_distance_0-9, has_green_bool, has_red_bool)
+            
             bucketized_obstacle = int((min(obstacle_dist, self.mapsize) / self.mapsize) * 9) if obstacle_dist <= self.mapsize else 9
             has_green = green_dist <= self.mapsize
             has_red = red_dist <= self.mapsize
@@ -119,10 +118,10 @@ class Game:
         head_x, head_y = snake_head
         output = []
         
-        # Display the cross (vertical line with horizontal line through head)
+        
         for y in range(len(self.map)):
             if y == head_y:
-                # Horizontal line at snake's Y position
+                
                 row = ""
                 for x in range(len(self.map[0])):
                     pos = (x, head_y)
@@ -140,7 +139,7 @@ class Game:
                         row += "0"
                 output.append(row)
             else:
-                # Vertical line parts (other rows), perfectly aligned
+                
                 pos = (head_x, y)
                 if pos == snake_head:
                     col_char = "H"
@@ -155,10 +154,9 @@ class Game:
                 else:
                     col_char = "0"
                 
-                # Align vertically with spaces
                 output.append(" " * head_x + col_char)
         
-        # Add decision if provided
+        
         if direction_chosen:
             output.append("")
             output.append(f"Decision: {direction_chosen}")
@@ -191,6 +189,9 @@ class Game:
         self.last_direction = action
         vision_before = self.compute_vision()
         length_before = len(self.snake.body)
+
+        head_x, head_y = self.snake.head
+        min_dist_before = min(head_x - 1, self.mapsize - head_x, head_y - 1, self.mapsize - head_y)
         
         self.snake.move(action)
         
@@ -216,7 +217,6 @@ class Game:
                 self.snake.grow()
             elif apple_type == "R":
                 self.snake.shrink()
-            # Respawn new apple of same type
             new_pos = self.generate_apples(apple_type)
             self.apples.append((apple_type, new_pos))
             self.steps_since_eaten = 0
@@ -225,7 +225,7 @@ class Game:
 
         if len(self.snake.body) == 0:
             return None, -1000, "ZERO_LENGTH"
-        if self.steps_since_eaten > 400:
+        if self.steps_since_eaten > 40 * self.mapsize:
             return None, -500, "STARVED"
 
         vision_after = self.compute_vision()
@@ -237,7 +237,7 @@ class Game:
         else:
             inactivity_penalty = max(0, (self.steps_since_eaten - 50) * 0.1)
             reward = -0.5 - inactivity_penalty + 0.1
-        
+
             apple_was_visible = self._has_visible_green_apple(vision_before)
             apple_is_visible = self._has_visible_green_apple(vision_after)
             
@@ -245,6 +245,11 @@ class Game:
                 reward -= 5.0
             elif apple_was_visible and apple_is_visible:
                 reward += 10
+
+        head_after = self.snake.head
+        min_dist_after = min(head_after[0] - 1, self.mapsize - head_after[0], head_after[1] - 1, self.mapsize - head_after[1])
+        delta = min_dist_after - min_dist_before
+        reward += delta * 0.2
         
         return vision_after, reward, "OK"
 

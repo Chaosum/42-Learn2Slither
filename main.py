@@ -1,3 +1,4 @@
+import sys
 from src.game import Game
 from src.agent import Agent
 from src.interpreter import Interpreter
@@ -18,7 +19,6 @@ def play_episode_debug(interpreter, use_gui=False):
 	
 	if use_gui:
 		gui = GUI(game, cell_size=20)
-		# Set speed to slowest (1) for debug mode
 		gui.speed = 1
 	
 	vision = game.compute_vision()
@@ -26,20 +26,17 @@ def play_episode_debug(interpreter, use_gui=False):
 	while True:
 		action = agent.choose_action(vision)
 		
-		# Display vision cross and decision
 		print(f"\n--- Step {steps + 1} ---")
 		print(game.print_vision_debug(action))
 		
-		# Handle GUI events if enabled
 		if gui:
 			if not gui.handle_events():
-				# User closed GUI - stop all tests
 				if gui:
 					gui.close()
 				return {
 					"total_reward": total_reward,
 					"steps": steps,
-					"status": "USER_STOPPED"  # Signal to stop all tests
+					"status": "USER_STOPPED"
 				}
 			gui.render(step=steps, reward=0, status="DEBUG")
 		
@@ -59,9 +56,9 @@ def play_episode_debug(interpreter, use_gui=False):
 				print(f"\nStatus: {status}! Reward: {reward:.1f}")
 			break
 		
-		if reward > 0 and reward > 1:  # Growth reward
+		if reward > 0 and reward > 1:
 			print(f"Ate apple! Reward: +{reward}")
-		elif reward > 0:  # Survival bonus
+		elif reward > 0:
 			print(f"✓ Survived step. Reward: +{reward:.1f}")
 		else:
 			print(f"Move penalty. Reward: {reward:.1f}")
@@ -104,7 +101,7 @@ def main():
 			model_manager.list_models()
 		elif choice == "4":
 			print("\nThanks for playing!")
-			return
+			sys.exit(0)
 		else:
 			print("Invalid choice (1-4). Please try again.")
 
@@ -120,7 +117,6 @@ def train_and_save_model(model_manager):
 	except ValueError:
 		print("Invalid input. Please enter a valid integer.")
 		return
-	# Choose training mode
 	print("\nTRAINING MODE")
 	print("-" * 60)
 	print("1. Fast training (no GUI)")
@@ -133,7 +129,6 @@ def train_and_save_model(model_manager):
 		mode_choice = "1"
 	use_gui = mode_choice == "2"
 
-	# Create fresh game and agent
 	game = Game(mapsize=10)
 	agent = Agent(learning_rate=0.15)
 	interpreter = Interpreter(agent, game)
@@ -161,21 +156,53 @@ def train_and_save_model(model_manager):
 			print(f"Average size (last 10): {avg_length:.1f}")
 			print(f"Max size (last 10): {max_length}")
 			
-			# Show best episode found
 			print(f"\nBest episode: #{best_episode_num} with size {best_episode_length}")
 			
-			# If best model is not the final one, restore it
 			if best_q_table is not None and best_episode_length > max_length:
 				print(f"Final model ({max_length}) weaker than best episode ({best_episode_length})")
 				print("Restoring best model found during training...")
 				agent.q_table = best_q_table
 
-			# Save model
 			model_name = input(
 				f"Model name (default: model_{sessions}): "
 			).strip()
 			if not model_name:
 				model_name = f"model_{sessions}"
+			try:
+				import numpy as np
+				import matplotlib.pyplot as plt
+				plot_path = model_manager.MODELS_DIR / f"{model_name}_training.png"
+				y = np.array(list(map(float, episode_lengths)))
+				x = np.arange(1, len(y) + 1)
+				plt.figure(figsize=(10, 4))
+				window = 100
+				cumsum = np.concatenate(([0.0], np.cumsum(y)))
+				idx = np.arange(1, len(y) + 1)
+				starts = np.maximum(0, idx - window)
+				sums = cumsum[idx] - cumsum[starts]
+				counts = idx - starts
+				y_roll = sums / counts
+				plt.figure(figsize=(10, 4))
+				plt.plot(idx, y_roll, lw=2, color='tab:blue', label=f'Rolling mean (100)')
+				plt.fill_between(idx, y_roll, alpha=0.12, color='tab:blue')
+				plt.xlabel('Episode')
+				plt.ylabel('Snake length')
+				plt.title(f'Training progress ({len(y)} episodes)')
+				if len(x) == 1:
+					plt.xlim(0.5, 1.5)
+				else:
+					plt.xlim(1, x[-1])
+				plt.ylim(0, max(y) + 1)
+				step = max(1, len(x)//9)
+				plt.xticks(x[::step])
+				plt.grid(alpha=0.3)
+				plt.legend(loc='upper left')
+				plt.tight_layout()
+				plt.savefig(plot_path)
+				plt.close()
+				print(f"Saved training plot: {plot_path}")
+			except Exception:
+				pass
 
 			model_manager.save_model(agent, model_name)
 
@@ -204,8 +231,6 @@ def test_saved_model(model_manager):
 	if not model_choice:
 		print("Model name cannot be empty")
 		return
-
-	# Ask for map size
 	print("\nMAP SIZE")
 	print("-" * 60)
 	print("1. Default (10x10)")
@@ -228,8 +253,6 @@ def test_saved_model(model_manager):
 			return
 	else:
 		mapsize = 10
-
-	# Ask for number of test runs
 	try:
 		num_runs = int(input("Number of test runs: "))
 		if num_runs <= 0:
@@ -238,8 +261,6 @@ def test_saved_model(model_manager):
 	except ValueError:
 		print("Please enter a valid integer")
 		return
-
-	# Ask for test mode (GUI or no GUI)
 	print("\nTEST MODE")
 	print("-" * 60)
 	print("1. Fast testing (no GUI)")
@@ -253,8 +274,6 @@ def test_saved_model(model_manager):
 		mode_choice = "1"
 	use_gui = mode_choice == "2"
 	debug_mode = mode_choice == "3"
-	
-	# Create fresh agent and load model
 	game = Game(mapsize=mapsize)
 	agent = Agent()
 	
@@ -265,16 +284,16 @@ def test_saved_model(model_manager):
 	agent.epsilon = 0
 	interpreter = Interpreter(agent, game)
 
-	print(f"\n▶️  Testing on {mapsize}x{mapsize} map ({num_runs} runs)...")
+	print(f"\nTesting on {mapsize}x{mapsize} map ({num_runs} runs)...")
 
 	play_with_model(agent, interpreter, mapsize, num_runs, use_gui, debug_mode)
 
 
 def play_with_model(agent, interpreter, mapsize=10, num_episodes=10, use_gui=True, debug_mode=False, verbose=True):
 	"""Test episodes with or without GUI"""
-	debug_gui = debug_mode  # If debug mode, always include GUI
+	debug_gui = debug_mode
 	
-	print(f"\n🐍 Running {num_episodes} test episodes", end="")
+	print(f"\nRunning {num_episodes} test episodes", end="")
 	if use_gui:
 		print(" (with GUI)...")
 	elif debug_mode:
@@ -295,9 +314,8 @@ def play_with_model(agent, interpreter, mapsize=10, num_episodes=10, use_gui=Tru
 		else:
 			stats = interpreter.play_episode(render=False)
 		
-		# Check if user stopped tests
 		if stats['status'] == "USER_STOPPED":
-			print("\n⛔ Tests stopped by user")
+			print("\nTests stopped by user")
 			break
 		
 		max_length = len(interpreter.game.snake.body)
@@ -306,13 +324,10 @@ def play_with_model(agent, interpreter, mapsize=10, num_episodes=10, use_gui=Tru
 		
 		if verbose:
 			print(f"Run {episode + 1}/{num_episodes} - Size: {max_length} | Reward: {stats['total_reward']:.1f} | Status: {stats['status']}")
-	
-	# Show summary only if tests were run
+
 	if not episode_lengths:
-		print("\n⛔ No episodes completed")
+		print("\nNo episodes completed")
 		return
-	
-	# Show summary
 	avg_length = sum(episode_lengths) / len(episode_lengths)
 	max_length_overall = max(episode_lengths)
 	min_length_overall = min(episode_lengths)

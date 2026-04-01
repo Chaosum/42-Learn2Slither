@@ -18,7 +18,7 @@ class Snake:
         body[1:] = other segments
         """
         self.body = body if body is not None else [(0, 0)]
-        self._last_tail = None  # Used for grow()
+        self._last_tail = None
 
     @property
     def head(self):
@@ -41,7 +41,7 @@ class Snake:
         
         x, y = self.head
         new_head = (x + direction[0], y + direction[1])
-        # Add new head
+        
         self.body.insert(0, new_head)
         self._last_tail = self.body.pop()
 
@@ -62,14 +62,11 @@ class Snake:
     def check_collision_wall(self, mapsize):
         """Check if head hits a wall (outside boundaries)"""
         x, y = self.head
-        # Map goes from 0 to mapsize+1 (walls at boundaries)
-        # Valid space: 1 to mapsize
         return x < 1 or x > mapsize or y < 1 or y > mapsize
 
     def check_collision_self(self):
         """Check if head collides with body"""
         head = self.head
-        # Check if head is in body (excluding head itself)
         return head in self.body[1:]
 
 

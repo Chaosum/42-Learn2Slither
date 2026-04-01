@@ -65,7 +65,6 @@ class Agent:
         if self.last_state is None or self.last_action is None:
             return
         
-        # If game ended, new_state is None (no next state)
         if new_state is None:
             new_state_key = None
             max_next_q = 0
@@ -74,8 +73,7 @@ class Agent:
             self._init_state(new_state_key)
             max_next_q = max(self.q_table[new_state_key].values())
         
-        # Q-learning formula:
-        # Q(s,a) = Q(s,a) + alpha * (r + gamma * max(Q(s',a')) - Q(s,a))
+        
         current_q = self.q_table[self.last_state][self.last_action]
         
         new_q = current_q + self.learning_rate * (
