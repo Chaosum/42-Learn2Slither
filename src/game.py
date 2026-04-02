@@ -102,12 +102,15 @@ class Game:
                 elif pos in red_positions and red_dist == self.mapsize + 1:
                     red_dist = distance
 
+            # Normalize bucketization to reference mapsize of 10
+            # This makes vision mapsize-agnostic during testing
+            reference_mapsize = 10
             bucketized_obstacle = int(
                 (min(
                     obstacle_dist,
-                    self.mapsize) /
-                    self.mapsize) *
-                9) if obstacle_dist <= self.mapsize else 9
+                    reference_mapsize) /
+                    reference_mapsize) *
+                9) if obstacle_dist <= reference_mapsize else 9
             has_green = green_dist <= self.mapsize
             has_red = red_dist <= self.mapsize
 

@@ -3,6 +3,10 @@ from src.game import Game
 from src.agent import Agent
 from src.interpreter import Interpreter
 from src.model_manager import ModelManager
+from src.gui_lobby import Lobby
+from src.gui_testing import TestingGUI
+from src.gui_dialogs_simple import InputDialogs
+from src.gui_summary import SummaryWindow
 
 
 def play_episode_debug(interpreter, use_gui=False):
@@ -80,66 +84,69 @@ def main():
     model_manager = ModelManager()
 
     while True:
-        print("\n" + "=" * 60)
-        print("Learn2Slither - Q-Learning Snake Game")
-        print("=" * 60)
-        print("\nMAIN MENU")
-        print("-" * 60)
-        print("1. Train agent and save model")
-        print("2. Load and test a saved model")
-        print("3. List saved models")
-        print("4. Exit")
-        print("-" * 60)
-
-        choice = input("\nChoose (1-4): ").strip()
+        # Show graphical lobby
+        lobby = Lobby()
+        choice = lobby.show()
 
         if choice == "1":
             train_and_save_model(model_manager)
         elif choice == "2":
             test_saved_model(model_manager)
         elif choice == "3":
-            model_manager.list_models()
-        elif choice == "4":
-            print("\nThanks for playing!")
+            print("\nThanks for playing! Closing application...")
             sys.exit(0)
         else:
-            print("Invalid choice (1-4). Please try again.")
+            print("Invalid choice (1-3). Please try again.")
 
 
 def train_and_save_model(model_manager):
     """Train agent and save model"""
 
-    try:
-        sessions = int(input("Number of sessions: "))
-        if sessions <= 0:
-            print("Number of sessions must be a positive integer.")
-            return
-    except ValueError:
-        print("Invalid input. Please enter a valid integer.")
-        return
-    print("\nTRAINING MODE")
-    print("-" * 60)
-    print("1. Fast training (no GUI)")
-    print("2. Visual training (with GUI)")
-    print("-" * 60)
+    sessions = InputDialogs.ask_integer(
+        "Training Sessions",
+        "How many training episodes?",
+        default=100,
+        min_val=1,
+        max_val=10000
+    )
 
-    mode_choice = input("Choose (1-2): ").strip()
-    if mode_choice not in ["1", "2"]:
-        print("Invalid choice. Using fast training (no GUI)")
-        mode_choice = "1"
-    use_gui = mode_choice == "2"
+    if sessions is None or sessions <= 0:
+        InputDialogs.show_error(
+            "Invalid Input",
+            "Number of sessions must be positive"
+        )
+        return
+
+    mode = InputDialogs.ask_choice(
+        "Training Mode",
+        [
+            ("Fast training (no GUI)", "1"),
+            ("Visual training (with GUI)", "2"),
+            ("Debug mode (GUI + vision)", "3"),
+        ]
+    )
+
+    if not mode:
+        return
+
+    use_gui = mode in ("2", "3")
+    debug_mode = mode == "3"
 
     game = Game(mapsize=10)
     agent = Agent(learning_rate=0.15)
     interpreter = Interpreter(agent, game)
 
-    print(f"\nTraining for {sessions} sessions...")
+    InputDialogs.show_info(
+        "Training Started",
+        f"Training for {sessions} episodes..."
+    )
 
     try:
         training_results = interpreter.train(
             episodes=sessions,
             verbose=True,
-            gui=use_gui
+            gui=use_gui,
+            debug_mode=debug_mode
         )
 
         episode_lengths = training_results['episode_lengths']
@@ -167,9 +174,20 @@ def train_and_save_model(model_manager):
                 print("Restoring best model found during training...")
                 agent.q_table = best_q_table
 
-            model_name = input(
-                f"Model name (default: model_{sessions}): "
-            ).strip()
+            # Show summary window
+            summary_data = {
+                "Episodes": sessions,
+                "Avg Length (last 10)": f"{avg_length:.1f}",
+                "Max Length (last 10)": max_length,
+                "Best Episode": f"#{best_episode_num}",
+                "Best Size": best_episode_length
+            }
+            SummaryWindow("Training Results", summary_data).show()
+
+            model_name = InputDialogs.ask_string(
+                "Save Model",
+                f"Model name (default: model_{sessions}):"
+            )
             if not model_name:
                 model_name = f"model_{sessions}"
             try:
@@ -216,12 +234,11 @@ def train_and_save_model(model_manager):
 
             model_manager.save_model(agent, model_name)
 
-            while True:
-                test_now = input("\nTest model now? (y/n): ").strip().lower()
-                if test_now in ["y", "n"]:
-                    break
-                print("Please enter 'y' or 'n'")
-            if test_now == "y":
+            test_now = InputDialogs.ask_yes_no(
+                "Test Model",
+                "Test model now?"
+            )
+            if test_now:
                 test_game = Game(mapsize=10)
                 test_interpreter = Interpreter(agent, test_game)
                 play_with_model(
@@ -244,52 +261,73 @@ def test_saved_model(model_manager):
         print("No models available to test")
         return
 
-    model_choice = input("\nEnter model name to test: ").strip()
-    if not model_choice:
-        print("Model name cannot be empty")
-        return
-    print("\nMAP SIZE")
-    print("-" * 60)
-    print("1. Default (10x10)")
-    print("2. Custom size")
-    print("-" * 60)
+    # Create choice list from available models
+    model_choices = [(m, m) for m in models]
 
-    size_choice = input("Choose (1-2): ").strip()
-    if size_choice not in ["1", "2"]:
-        print("Invalid choice. Using default (10x10)")
-        size_choice = "1"
+    model_choice = InputDialogs.ask_choice(
+        "Select Model",
+        model_choices
+    )
+    if not model_choice:
+        return
+
+    size_choice = InputDialogs.ask_choice(
+        "Map Size",
+        [
+            ("Default (10x10)", "1"),
+            ("Custom size", "2"),
+        ]
+    )
+
+    if not size_choice:
+        return
 
     if size_choice == "2":
-        try:
-            mapsize = int(input("Enter custom map size: "))
-            if mapsize < 5 or mapsize > 50:
-                print("Map size must be between 5 and 50")
-                return
-        except ValueError:
-            print("Please enter a valid integer (5-50)")
+        mapsize = InputDialogs.ask_integer(
+            "Custom Map Size",
+            "Enter map size (5-50):",
+            default=10,
+            min_val=5,
+            max_val=50
+        )
+
+        if mapsize is None or mapsize < 5 or mapsize > 50:
+            InputDialogs.show_error(
+                "Invalid Input",
+                "Map size must be between 5 and 50"
+            )
             return
     else:
         mapsize = 10
-    try:
-        num_runs = int(input("Number of test runs: "))
-        if num_runs <= 0:
-            print("Number of runs must be positive")
-            return
-    except ValueError:
-        print("Please enter a valid integer")
-        return
-    print("\nTEST MODE")
-    print("-" * 60)
-    print("1. Fast testing (no GUI)")
-    print("2. Visual testing (with GUI)")
-    print("3. Debug console + GUI")
-    print("-" * 60)
 
-    mode_choice = input("Choose (1-3): ").strip()
-    if mode_choice not in ["1", "2", "3"]:
-        print("Invalid choice. Using fast testing (no GUI)")
-        mode_choice = "1"
-    use_gui = mode_choice == "2"
+    num_runs = InputDialogs.ask_integer(
+        "Test Runs",
+        "Number of test runs:",
+        default=10,
+        min_val=1,
+        max_val=1000
+    )
+
+    if num_runs is None or num_runs <= 0:
+        InputDialogs.show_error(
+            "Invalid Input",
+            "Number of runs must be positive"
+        )
+        return
+
+    mode_choice = InputDialogs.ask_choice(
+        "Test Mode",
+        [
+            ("Fast testing (no GUI)", "1"),
+            ("Visual testing (with GUI)", "2"),
+            ("Debug mode (GUI + vision)", "3"),
+        ]
+    )
+
+    if not mode_choice:
+        return
+
+    use_gui = mode_choice in ("2", "3")
     debug_mode = mode_choice == "3"
     game = Game(mapsize=mapsize)
     agent = Agent()
@@ -314,27 +352,31 @@ def play_with_model(
         use_gui=True,
         debug_mode=False,
         verbose=True):
-    """Test episodes with or without GUI"""
-    debug_gui = debug_mode
+    """Test episodes with persistent GUI if enabled"""
 
     print(f"\nRunning {num_episodes} test episodes", end="")
     if use_gui:
         print(" (with GUI)...")
-    elif debug_mode:
-        print(" (debug console + GUI)...")
     else:
         print(" (no GUI)...")
 
     episode_lengths = []
     episode_rewards = []
+    episodes_data = []
+
+    # Use persistent GUI if enabled
+    gui = None
+    if use_gui:
+        gui = TestingGUI(mapsize=mapsize, cell_size=20)
 
     for episode in range(num_episodes):
         interpreter.game = Game(mapsize=mapsize)
 
-        if use_gui:
-            stats = interpreter.play_episode_gui()
-        elif debug_mode:
-            stats = play_episode_debug(interpreter, use_gui=debug_gui)
+        if gui:
+            # Use persistent testing GUI for all episodes
+            stats = _play_episode_with_gui(
+                interpreter, gui, episode + 1, num_episodes, debug_mode
+            )
         else:
             stats = interpreter.play_episode(render=False)
 
@@ -345,13 +387,24 @@ def play_with_model(
         max_length = len(interpreter.game.snake.body)
         episode_lengths.append(max_length)
         episode_rewards.append(stats['total_reward'])
+        episodes_data.append({
+            'length': max_length,
+            'reward': stats['total_reward'],
+            'status': stats['status']
+        })
 
-        if verbose:
+        if verbose and not gui:
+            avg_ep_reward = stats['total_reward'] / max(1, stats['steps'])
             print(
                 f"Run {episode + 1}/{num_episodes} - "
                 f"Size: {max_length} | "
-                f"Reward: {stats['total_reward']:.1f} | "
+                f"Avg Reward/Step: {avg_ep_reward:.3f} | "
                 f"Status: {stats['status']}")
+
+    # Show results
+    if gui:
+        gui.show_results(episodes_data)
+        gui.close()
 
     if not episode_lengths:
         print("\nNo episodes completed")
@@ -359,7 +412,6 @@ def play_with_model(
     avg_length = sum(episode_lengths) / len(episode_lengths)
     max_length_overall = max(episode_lengths)
     min_length_overall = min(episode_lengths)
-    avg_reward = sum(episode_rewards) / len(episode_rewards)
 
     print("\n" + "=" * 60)
     print(f"TEST SUMMARY ({len(episode_lengths)} episodes)")
@@ -367,9 +419,73 @@ def play_with_model(
     print(f"Average size: {avg_length:.1f}")
     print(f"Max size: {max_length_overall}")
     print(f"Min size: {min_length_overall}")
-    print(f"Average reward: {avg_reward:.1f}")
     print("=" * 60)
+
+    # Show summary window
+    summary_data = {
+        "Episodes": len(episode_lengths),
+        "Average Length": f"{avg_length:.1f}",
+        "Max Length": max_length_overall,
+        "Min Length": min_length_overall
+    }
+    SummaryWindow("Test Results", summary_data).show()
+
+
+def _play_episode_with_gui(interpreter, gui, episode, total_episodes,
+                           debug_mode=False):
+    """Play one episode with persistent GUI"""
+    agent = interpreter.agent
+    game = interpreter.game
+
+    total_reward = 0
+    steps = 0
+    game_status = "OK"
+
+    vision = game.compute_vision()
+
+    while True:
+        action = agent.choose_action(vision)
+        new_vision, reward, status = game.step(action)
+
+        total_reward += reward
+        steps += 1
+        game_status = status
+
+        if debug_mode:
+            vision_display = game.print_vision_debug(direction_chosen=action)
+            print(vision_display)
+
+        gui.render(
+            game,
+            episode=episode,
+            step=steps,
+            reward=reward,
+            status=status
+        )
+
+        if not gui.running:
+            return {
+                "total_reward": total_reward,
+                "steps": steps,
+                "status": "USER_STOPPED"
+            }
+
+        if status != "OK":
+            break
+
+        vision = new_vision
+
+    return {
+        "total_reward": total_reward,
+        "steps": steps,
+        "status": game_status
+    }
 
 
 if __name__ == "__main__":
+    print("\n" + "="*60)
+    print("   🐍 Welcome to Learn2Slither 🐍")
+    print("   Q-Learning Snake Game")
+    print("="*60 + "\n")
+
     main()

@@ -34,7 +34,7 @@ class Interpreter:
             "status": game_status
         }
 
-    def train(self, episodes=1000, verbose=True, gui=False):
+    def train(self, episodes=1000, verbose=True, gui=False, debug_mode=False):
         self.episodes_total = episodes
         episode_lengths = []
         episode_rewards = []
@@ -43,17 +43,22 @@ class Interpreter:
         best_episode_num = 0
         best_q_table = None
 
+        gui_obj = None
         if gui:
-            from src.gui import GUI
+            try:
+                from src.gui import GUI
+                gui_obj = GUI
+            except ImportError:
+                gui = False
 
         for episode in range(episodes):
             self.agent.epsilon = max(0.05, 1.0 - (episode / episodes) * 0.95)
 
             self.game = type(self.game)(self.game.mapsize)
 
-            if gui:
+            if gui and gui_obj:
                 if gui_instance is None:
-                    gui_instance = GUI(self.game, cell_size=20)
+                    gui_instance = gui_obj(self.game, cell_size=20)
                 else:
                     gui_instance.game = self.game
 
@@ -63,24 +68,31 @@ class Interpreter:
 
             vision = self.game.compute_vision()
 
-            if gui:
+            if gui and gui_instance:
                 gui_instance.render(step=0, reward=0, status="START")
 
+            user_stopped = False
             while True:
-                if gui and not gui_instance.handle_events():
-                    gui_instance.close()
-                    break
+                if gui and gui_instance:
+                    if not gui_instance.handle_events():
+                        user_stopped = True
+                        break
 
                 action = self.agent.choose_action(vision)
                 new_vision, reward, status = self.game.step(action)
                 self.agent.learn(new_vision, reward)
+
+                if debug_mode:
+                    vision_display = self.game.print_vision_debug(
+                        direction_chosen=action)
+                    print(vision_display)
 
                 total_reward += reward
                 steps += 1
                 current_length = len(self.game.snake.body)
                 max_length = max(max_length, current_length)
 
-                if gui:
+                if gui and gui_instance:
                     gui_instance.render(
                         step=steps, reward=reward, status=status)
 
@@ -88,6 +100,9 @@ class Interpreter:
                     break
 
                 vision = new_vision
+
+            if user_stopped:
+                break
 
             episode_lengths.append(max_length)
             episode_rewards.append(total_reward)
