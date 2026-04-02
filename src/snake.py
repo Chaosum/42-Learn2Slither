@@ -4,16 +4,17 @@
 class Snake:
     """Represents the snake in the game"""
 
-    directions = { "LEFT": (-1, 0), "RIGHT": (1, 0), "UP": (0, -1), "DOWN": (0, 1) }
+    directions = {"LEFT": (-1, 0), "RIGHT": (1, 0),
+                  "UP": (0, -1), "DOWN": (0, 1)}
 
     def __init__(self, body=None):
         """
         Initialize snake with body segments
-        
+
         Args:
             body: list of (x, y) tuples starting with head
                   If None, starts with single head at (0, 0)
-        
+
         body[0] = head
         body[1:] = other segments
         """
@@ -33,15 +34,15 @@ class Snake:
     def move(self, moveDirection):
         """
         Move snake in direction
-        
+
         Args:
             moveDirection: String "UP", "DOWN", "LEFT", or "RIGHT"
         """
         direction = self.directions[moveDirection]
-        
+
         x, y = self.head
         new_head = (x + direction[0], y + direction[1])
-        
+
         self.body.insert(0, new_head)
         self._last_tail = self.body.pop()
 
@@ -68,5 +69,3 @@ class Snake:
         """Check if head collides with body"""
         head = self.head
         return head in self.body[1:]
-
-

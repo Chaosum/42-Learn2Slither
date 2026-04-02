@@ -6,7 +6,7 @@ class Game:
     """Game class for Learn2Slither"""
 
     def initmap(self, mapsize=1):
-        """Initialize a square map of size n x n (only walls and empty spaces)"""
+        """Initialize a square map (only walls and empty spaces)"""
         self.map = [
             ["W" if (i == 0 or i == mapsize + 1 or
                      j == 0 or j == mapsize + 1) else "0"
@@ -22,29 +22,28 @@ class Game:
     def generate_apples(self, entity="G"):
         occupied = set(self.snake.body if hasattr(self, 'snake') else [])
         occupied.update(pos for _, pos in self.apples)
-        
+
         max_attempts = 100
         for attempt in range(max_attempts):
             x = random.randint(1, self.mapsize)
             y = random.randint(1, self.mapsize)
             pos = (x, y)
-            
+
             if pos not in occupied:
                 return pos
-        
-        
+
         for y in range(1, self.mapsize + 1):
             for x in range(1, self.mapsize + 1):
                 if (x, y) not in occupied:
                     return (x, y)
         return (1, 1)
-    
+
     def generate_snake_position(self):
         while True:
             x = random.randint(1, len(self.map) - 2)
             y = random.randint(1, len(self.map) - 2)
             direction_idx = random.randint(0, 3)
-            
+
             if direction_idx == 0:
                 body = [(x, y), (x - 1, y), (x - 2, y)]
                 direction = "RIGHT"
@@ -57,10 +56,10 @@ class Game:
             else:
                 body = [(x, y), (x, y + 1), (x, y + 2)]
                 direction = "UP"
-            
-            if all(1 <= seg_x < len(self.map) - 1 and 
-                   1 <= seg_y < len(self.map) - 1 and 
-                   self.map[seg_y][seg_x] == "0" 
+
+            if all(1 <= seg_x < len(self.map) - 1 and
+                   1 <= seg_y < len(self.map) - 1 and
+                   self.map[seg_y][seg_x] == "0"
                    for seg_x, seg_y in body):
                 for i, (seg_x, seg_y) in enumerate(body):
                     self.map[seg_y][seg_x] = "H" if i == 0 else "s"
@@ -68,44 +67,52 @@ class Game:
 
     def compute_vision(self):
         x, y = self.snake.head
-        directions = {"UP": (0, -1), "DOWN": (0, 1), "LEFT": (-1, 0), "RIGHT": (1, 0)}
-        green_positions = set(pos for atype, pos in self.apples if atype == "G")
+        directions = {"UP": (0, -1), "DOWN": (0, 1),
+                      "LEFT": (-1, 0), "RIGHT": (1, 0)}
+        green_positions = set(
+            pos for atype,
+            pos in self.apples if atype == "G")
         red_positions = set(pos for atype, pos in self.apples if atype == "R")
-        
+
         vision = {}
-        
+
         for direction_name, (dx, dy) in directions.items():
             obstacle_dist = self.mapsize + 1
             green_dist = self.mapsize + 1
             red_dist = self.mapsize + 1
-            
+
             for distance in range(1, self.mapsize + 2):
                 look_x = x + dx * distance
                 look_y = y + dy * distance
-                
-                if look_x < 1 or look_x > self.mapsize or look_y < 1 or look_y > self.mapsize:
+
+                if (look_x < 1 or look_x > self.mapsize or
+                        look_y < 1 or look_y > self.mapsize):
                     if obstacle_dist == self.mapsize + 1:
                         obstacle_dist = distance
                     break
-                
+
                 pos = (look_x, look_y)
                 if pos in self.snake.body[1:]:
                     if obstacle_dist == self.mapsize + 1:
                         obstacle_dist = distance
                     continue
-                
+
                 if pos in green_positions and green_dist == self.mapsize + 1:
                     green_dist = distance
                 elif pos in red_positions and red_dist == self.mapsize + 1:
                     red_dist = distance
-            
-            
-            bucketized_obstacle = int((min(obstacle_dist, self.mapsize) / self.mapsize) * 9) if obstacle_dist <= self.mapsize else 9
+
+            bucketized_obstacle = int(
+                (min(
+                    obstacle_dist,
+                    self.mapsize) /
+                    self.mapsize) *
+                9) if obstacle_dist <= self.mapsize else 9
             has_green = green_dist <= self.mapsize
             has_red = red_dist <= self.mapsize
-            
+
             vision[direction_name] = (bucketized_obstacle, has_green, has_red)
-        
+
         return vision
 
     def print_vision_debug(self, direction_chosen=None):
@@ -114,14 +121,13 @@ class Game:
         snake_body = set(self.snake.body[1:])
         green_apples = {pos for atype, pos in self.apples if atype == "G"}
         red_apples = {pos for atype, pos in self.apples if atype == "R"}
-        
+
         head_x, head_y = snake_head
         output = []
-        
-        
+
         for y in range(len(self.map)):
             if y == head_y:
-                
+
                 row = ""
                 for x in range(len(self.map[0])):
                     pos = (x, head_y)
@@ -139,7 +145,7 @@ class Game:
                         row += "0"
                 output.append(row)
             else:
-                
+
                 pos = (head_x, y)
                 if pos == snake_head:
                     col_char = "H"
@@ -153,16 +159,15 @@ class Game:
                     col_char = "W"
                 else:
                     col_char = "0"
-                
+
                 output.append(" " * head_x + col_char)
-        
-        
+
         if direction_chosen:
             output.append("")
             output.append(f"Decision: {direction_chosen}")
-        
+
         return "\n".join(output)
-    
+
     def _has_visible_green_apple(self, vision):
         return any(has_green for _, has_green, _ in vision.values())
 
@@ -181,20 +186,23 @@ class Game:
         self.snake = Snake(snake_body)
         self.last_direction = initial_direction
 
-
     def step(self, action):
         if action == self.opposite_directions[self.last_direction]:
             action = self.last_direction
-        
+
         self.last_direction = action
         vision_before = self.compute_vision()
         length_before = len(self.snake.body)
 
         head_x, head_y = self.snake.head
-        min_dist_before = min(head_x - 1, self.mapsize - head_x, head_y - 1, self.mapsize - head_y)
-        
+        min_dist_before = min(
+            head_x - 1,
+            self.mapsize - head_x,
+            head_y - 1,
+            self.mapsize - head_y)
+
         self.snake.move(action)
-        
+
         if self.snake.check_collision_wall(self.mapsize):
             return None, -1000, "WALL"
 
@@ -231,7 +239,7 @@ class Game:
         vision_after = self.compute_vision()
         length_after = len(self.snake.body)
         length_change = length_after - length_before
-        
+
         if length_change > 0:
             reward = length_change * 200
         else:
@@ -240,33 +248,39 @@ class Game:
 
             apple_was_visible = self._has_visible_green_apple(vision_before)
             apple_is_visible = self._has_visible_green_apple(vision_after)
-            
+
             if apple_was_visible and not apple_is_visible:
                 reward -= 5.0
             elif apple_was_visible and apple_is_visible:
                 reward += 10
 
         head_after = self.snake.head
-        min_dist_after = min(head_after[0] - 1, self.mapsize - head_after[0], head_after[1] - 1, self.mapsize - head_after[1])
+        min_dist_after = min(
+            head_after[0] - 1,
+            self.mapsize - head_after[0],
+            head_after[1] - 1,
+            self.mapsize - head_after[1])
         delta = min_dist_after - min_dist_before
         reward += delta * 0.2
-        
+
         return vision_after, reward, "OK"
 
     def render(self):
         print("\n" + "=" * 30)
-        print(f"Snake: {len(self.snake.body)} segments | Apples: {len(self.apples)}")
+        print(
+            f"Snake: {len(self.snake.body)} segments | "
+            f"Apples: {len(self.apples)}")
         print("=" * 30)
-        
+
         display_map = [row[:] for row in self.map]
-        
+
         for i, (x, y) in enumerate(self.snake.body):
             display_map[y][x] = "H" if i == 0 else "s"
-        
+
         for apple_type, (x, y) in self.apples:
             display_map[y][x] = apple_type
-        
+
         for row in display_map:
             print(" ".join(row))
-        
+
         print("=" * 30)

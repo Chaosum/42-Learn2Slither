@@ -1,6 +1,5 @@
 """Model saving and loading for trained agents"""
 import json
-import os
 from pathlib import Path
 
 
@@ -16,64 +15,62 @@ class ModelManager:
     def save_model(self, agent, name):
         """
         Save agent's Q-table to file
-        
+
         Args:
             agent: Agent instance
             name: str - Model name (e.g., "model_1", "model_10", "model_100")
         """
         filepath = self.MODELS_DIR / f"{name}.json"
-        
-        
+
         q_table_serializable = {}
         for state_key, actions in agent.q_table.items():
-            
+
             state_str = str(state_key)
             q_table_serializable[state_str] = actions
-        
+
         data = {
             "q_table": q_table_serializable,
             "epsilon": agent.epsilon,
             "learning_rate": agent.learning_rate,
             "discount_factor": agent.discount_factor,
         }
-        
+
         with open(filepath, "w") as f:
             json.dump(data, f, indent=2)
-        
+
         print(f"[OK] Model saved: {filepath}")
 
     def load_model(self, agent, name):
         """
         Load agent's Q-table from file
-        
+
         Args:
             agent: Agent instance to update
             name: str - Model name to load
-        
+
         Returns:
             bool - Success status
         """
         filepath = self.MODELS_DIR / f"{name}.json"
-        
+
         if not filepath.exists():
             print(f"[ERROR] Model not found: {filepath}")
             return False
-        
+
         try:
             with open(filepath, "r") as f:
                 data = json.load(f)
-            
-            
+
             agent.q_table = {}
             for state_str, actions in data["q_table"].items():
-                
+
                 state_tuple = eval(state_str)
                 agent.q_table[state_tuple] = actions
-            
+
             agent.epsilon = 0
             agent.learning_rate = data.get("learning_rate", 0.1)
             agent.discount_factor = data.get("discount_factor", 0.95)
-            
+
             print(f"[OK] Model loaded: {filepath}")
             return True
         except Exception as e:
@@ -86,7 +83,7 @@ class ModelManager:
         if not models:
             print("No models saved yet")
             return []
-        
+
         model_names = [m.stem for m in models]
         print("Available models:")
         for name in sorted(model_names):
