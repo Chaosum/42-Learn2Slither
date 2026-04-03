@@ -91,12 +91,139 @@ def main():
         if choice == "1":
             train_and_save_model(model_manager)
         elif choice == "2":
-            test_saved_model(model_manager)
+            continue_training(model_manager)
         elif choice == "3":
+            test_saved_model(model_manager)
+        elif choice == "4":
             print("\nThanks for playing! Closing application...")
             sys.exit(0)
         else:
-            print("Invalid choice (1-3). Please try again.")
+            print("Invalid choice (1-4). Please try again.")
+
+
+def continue_training(model_manager):
+    """Continue training an existing model"""
+    models = model_manager.list_models()
+
+    if not models:
+        InputDialogs.show_error(
+            "No Models",
+            "No saved models available to continue training"
+        )
+        return
+
+    # Create choice list from available models
+    model_choices = [(m, m) for m in models]
+
+    model_choice = InputDialogs.ask_choice(
+        "Select Model",
+        model_choices
+    )
+    if not model_choice:
+        return
+
+    sessions = InputDialogs.ask_integer(
+        "Additional Episodes",
+        "How many additional training episodes?",
+        default=100,
+        min_val=1,
+        max_val=10000
+    )
+
+    if sessions is None or sessions <= 0:
+        InputDialogs.show_error(
+            "Invalid Input",
+            "Number of sessions must be positive"
+        )
+        return
+
+    mode = InputDialogs.ask_choice(
+        "Training Mode",
+        [
+            ("Fast training (no GUI)", "1"),
+            ("Visual training (with GUI)", "2"),
+            ("Debug mode (GUI + vision)", "3"),
+        ]
+    )
+
+    if not mode:
+        return
+
+    use_gui = mode in ("2", "3")
+    debug_mode = mode == "3"
+
+    game = Game(mapsize=10)
+    agent = Agent(learning_rate=0.15)
+    interpreter = Interpreter(agent, game)
+
+    if not model_manager.load_model(agent, model_choice):
+        InputDialogs.show_error(
+            "Load Failed",
+            f"Failed to load model: {model_choice}"
+        )
+        return
+
+    InputDialogs.show_info(
+        "Training Started",
+        f"Continuing training for {sessions} additional episodes..."
+    )
+
+    try:
+        training_results = interpreter.train(
+            episodes=sessions,
+            verbose=True,
+            gui=use_gui,
+            debug_mode=debug_mode
+        )
+
+        episode_lengths = training_results['episode_lengths']
+        best_episode_length = training_results['best_episode_length']
+        best_episode_num = training_results['best_episode_num']
+        best_q_table = training_results['best_q_table']
+
+        if episode_lengths:
+            avg_length = sum(episode_lengths[-10:]) / len(
+                episode_lengths[-10:]
+            )
+            max_length = max(episode_lengths[-10:])
+            print("\nContinued training complete!")
+            print(f"Average size (last 10): {avg_length:.1f}")
+            print(f"Max size (last 10): {max_length}")
+
+            print(
+                f"\nBest episode: #{best_episode_num} with size "
+                f"{best_episode_length}")
+
+            if best_q_table is not None and best_episode_length > max_length:
+                print(
+                    f"Final model ({max_length}) weaker than "
+                    f"best episode ({best_episode_length})")
+                print("Restoring best model found during training...")
+                agent.q_table = best_q_table
+
+            # Show summary window
+            summary_data = {
+                "Episodes": sessions,
+                "Avg Length (last 10)": f"{avg_length:.1f}",
+                "Max Length (last 10)": max_length,
+                "Best Episode": f"#{best_episode_num}",
+                "Best Size": best_episode_length
+            }
+            SummaryWindow("Training Results", summary_data).show()
+
+            save_choice = InputDialogs.ask_yes_no(
+                "Save Model",
+                f"Save continued model as '{model_choice}'?"
+            )
+            if save_choice:
+                model_manager.save_model(agent, model_choice)
+                InputDialogs.show_info(
+                    "Model Saved",
+                    f"Model '{model_choice}' has been updated"
+                )
+
+    except KeyboardInterrupt:
+        print("\nTraining interrupted by user")
 
 
 def train_and_save_model(model_manager):

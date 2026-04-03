@@ -68,10 +68,22 @@ class Lobby:
         )
         train_btn.pack(pady=12, fill=tk.X)
 
+        # Continue training button
+        continue_btn = tk.Button(
+            menu_frame,
+            text="2. Continue Training",
+            command=self._on_continue,
+            bg="#9B59B6",
+            fg="white",
+            activebackground="#8E44AD",
+            **button_style
+        )
+        continue_btn.pack(pady=12, fill=tk.X)
+
         # Test button
         test_btn = tk.Button(
             menu_frame,
-            text="2. Test Saved Model",
+            text="3. Test Saved Model",
             command=self._on_test,
             bg="#2ECC71",
             fg="white",
@@ -83,7 +95,7 @@ class Lobby:
         # Exit button
         exit_btn = tk.Button(
             menu_frame,
-            text="3. Exit",
+            text="4. Exit",
             command=self._on_exit,
             bg="#E74C3C",
             fg="white",
@@ -111,14 +123,19 @@ class Lobby:
         self.choice = "1"
         self.root.quit()
 
+    def _on_continue(self):
+        """Handle continue training button"""
+        self.choice = "2"
+        self.root.quit()
+
     def _on_test(self):
         """Handle test button"""
-        self.choice = "2"
+        self.choice = "3"
         self.root.quit()
 
     def _on_exit(self):
         """Handle exit button"""
-        self.choice = "3"
+        self.choice = "4"
         self.root.quit()
 
     def show(self):
