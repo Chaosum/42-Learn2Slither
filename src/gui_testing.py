@@ -35,7 +35,7 @@ class TestingGUI:
         # Header
         header = Label(
             self.root,
-            text="🐍 Testing Mode",
+            text="Testing Mode",
             font=("Arial", 16, "bold"),
             bg=self.ACCENT,
             fg="white"
@@ -246,7 +246,7 @@ class TestingGUI:
             self.canvas.delete("all")
 
             results_text = (
-                f"📊 RESULTS SUMMARY\n\n"
+                f"RESULTS SUMMARY\n\n"
                 f"Episodes Completed: {total_episodes}\n"
                 f"Average Length: {avg_length:.1f}\n"
                 f"Best Length: {max_length}\n"
@@ -263,7 +263,7 @@ class TestingGUI:
                 justify=tk.CENTER
             )
 
-            self.info_label.config(text="✅ Testing Complete!")
+            self.info_label.config(text="Testing Complete!")
 
             self.root.update()
             self.root.after(3000)

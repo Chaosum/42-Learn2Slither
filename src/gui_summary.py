@@ -23,7 +23,7 @@ class SummaryWindow:
 
         title_label = tk.Label(
             title_frame,
-            text="📊 Results Summary",
+            text="Results Summary",
             font=("Arial", 32, "bold"),
             bg="#34495E",
             fg="#1ABC9C"

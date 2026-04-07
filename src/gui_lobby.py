@@ -28,7 +28,7 @@ class Lobby:
 
         title = tk.Label(
             title_frame,
-            text="🐍 Learn2Slither 🐍",
+            text="Learn2Slither",
             font=("Arial", 36, "bold"),
             bg="#34495E",
             fg="#1ABC9C"

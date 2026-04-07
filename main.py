@@ -611,7 +611,7 @@ def _play_episode_with_gui(interpreter, gui, episode, total_episodes,
 
 if __name__ == "__main__":
     print("\n" + "="*60)
-    print("   🐍 Welcome to Learn2Slither 🐍")
+    print("   Welcome to Learn2Slither")
     print("   Q-Learning Snake Game")
     print("="*60 + "\n")
 
